@@ -1,36 +1,24 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
-import digikidsImg from "../static/digikids_logo.png";
-import gadgetbuffsImg from "../static/gadgetbuffs_logo.png";
-import genztechImg from "../static/genztech_logo.png";
+import { ProjectsData } from "./utilities";
 
-export default class Projects extends Component {
-  render() {
-    return (
-      <>
-        <Wrapper>
-          <ProjectWrapper>
-            <Image src={digikidsImg} alt="Digikids Logo" />
+export default function Projects() {
+  const projects = ProjectsData.items;
+
+  return (
+    <>
+      <Wrapper>
+        {projects.map((projects) => (
+          <ProjectWrapper key={projects.id}>
+            <Image src={projects.imgLink} alt={projects.description} />
             <Button as="a" href="/">
               View Project
             </Button>
           </ProjectWrapper>
-          <ProjectWrapper>
-            <Image src={gadgetbuffsImg} alt="Gadgetbuffs Logo" />
-            <Button as="a" href="/">
-              View Project
-            </Button>
-          </ProjectWrapper>
-          <ProjectWrapper>
-            <Image src={genztechImg} alt="Genztech Logo" />
-            <Button as="a" href="/">
-              View Project
-            </Button>
-          </ProjectWrapper>
-        </Wrapper>
-      </>
-    );
-  }
+        ))}
+      </Wrapper>
+    </>
+  );
 }
 
 const ProjectWrapper = styled.div``;
