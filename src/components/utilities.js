@@ -1,22 +1,21 @@
-import digikidsImg from "../static/digikids_logo.png";
-import gadgetbuffsImg from "../static/gadgetbuffs_logo.png";
-import genztechImg from "../static/genztech_logo.png";
-
 export const ProjectsData = {
     items: [{
         id: 1,
-        imgLink: digikidsImg,
-        description: "Digikids Logo",
+        name: "Digikids",
+        type: "e-learning website",
+        link: "/",
 
     }, {
         id: 2,
-        imgLink: gadgetbuffsImg,
-        description: "Gadgetbuffs Logo",
+        name: "GadgetBuffs",
+        type: "brand website",
+        link: "/",
 
     }, {
         id: 3,
-        imgLink: genztechImg,
-        description: "Genztech Logo",
+        name: "Genztech",
+        type: "in-house brand",
+        link: "/",
 
     }]
 
