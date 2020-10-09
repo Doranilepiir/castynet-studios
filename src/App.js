@@ -1,5 +1,6 @@
 import React from "react";
 import Intro from "./components/intro";
+import Projects from "./components/projects";
 import { HorizontalRule } from "@styled-icons/material-outlined/HorizontalRule";
 import styled from "styled-components";
 
@@ -11,6 +12,7 @@ export default function App() {
         <HorizontalRule size="30" />
         projects
       </Title>
+      <Projects />
       <Title>
         <HorizontalRule size="30" />
         about
