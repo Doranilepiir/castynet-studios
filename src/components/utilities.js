@@ -2,19 +2,19 @@ export const ProjectsData = {
     items: [{
         id: 1,
         name: "Digikids",
-        type: "e-learning website",
+        type: "E-Learning Website",
         link: "/",
 
     }, {
         id: 2,
         name: "GadgetBuffs",
-        type: "brand website",
+        type: "Brand Website",
         link: "/",
 
     }, {
         id: 3,
         name: "Genztech",
-        type: "in-house brand",
+        type: "In-house Brand",
         link: "/",
 
     }]
