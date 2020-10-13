@@ -5,6 +5,7 @@ import { HorizontalRule } from "@styled-icons/material-outlined/HorizontalRule";
 import styled from "styled-components";
 import Particles from "./components/particles";
 import { ExpandOutline } from "@styled-icons/evaicons-outline/ExpandOutline";
+import About from "./components/about"
 
 export default function App() {
   return (
@@ -33,6 +34,7 @@ export default function App() {
         <LineBg>about</LineBg>
         <ExpandOutline size="35" color="#ff5722" />
       </Title>
+      <About/>
       <Title>
         <HorizontalRule size="30" />
         <LineBg>get in touch</LineBg>
