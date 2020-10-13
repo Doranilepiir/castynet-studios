@@ -2,7 +2,7 @@ export const ProjectsData = {
     items: [{
         id: 1,
         name: "Digikids",
-        type: "E-Learning Website",
+        type: "E-Learning Portal",
         link: "/",
 
     }, {
