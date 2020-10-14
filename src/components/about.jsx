@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { Github } from "@styled-icons/fa-brands/Github";
-import { Twitter } from "@styled-icons/boxicons-logos/Twitter";
-import { LinkOutline } from "@styled-icons/evaicons-outline/LinkOutline";
-import { Instagram } from "@styled-icons/boxicons-logos/Instagram";
+import { Icons, Links } from "./utilities";
 
 export default function About() {
+  const external = "noopener noreferrer external";
+  const blank = "_blank"
+
   return (
     <>
       <AboutDescription>
@@ -24,43 +24,27 @@ export default function About() {
       </AboutDescription>
       <Rating>
         <ListTitle>Rating</ListTitle>
-        <a
-          href="https://go.genztech.xyz/google_listing"
-          target="_blank"
-          rel="noopener noreferrer external"
-        >
+        <a href={Links.GoogleListing} target={blank} rel={external}>
           <li>
-            5/5 Star on Google <LinkOutline size="20" />
+            5/5 Star on Google <Icons.Link size="20" />
           </li>
         </a>
       </Rating>
       <Stats>
         <ListTitle>Stats</ListTitle>
-        <a
-          href="https://go.genztech.xyz/Github"
-          target="_blank"
-          rel="noopener noreferrer external"
-        >
+        <a href={Links.Github} target={blank} rel={external}>
           <li>
-            &cong; 847,030 lines of code <Github size="20" />
+            &cong; 847,030 lines of code <Icons.Github size="20" />
           </li>
         </a>
-        <a
-          href="https://go.genztech.xyz/instagram"
-          target="_blank"
-          rel="noopener noreferrer external"
-        >
+        <a href={Links.Instagram} target={blank} rel={external}>
           <li>
-            1.8k Supporters <Instagram size="20" />
+            1.8k Supporters <Icons.Instagram size="20" />
           </li>
         </a>
-        <a
-          href="https://go.genztech.xyz/twitter"
-          target="_blank"
-          rel="noopener noreferrer external"
-        >
+        <a href={Links.Twitter} target={blank} rel={external}>
           <li>
-            970 Tweets <Twitter size="20" />
+            970 Tweets <Icons.Twitter size="20" />
           </li>
         </a>
       </Stats>
