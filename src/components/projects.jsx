@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { ProjectsData } from "./utilities";
-import { BadgeCheck } from "@styled-icons/boxicons-regular/BadgeCheck";
+import { Icons } from "./utilities";
 
 export default function Projects() {
   const projects = ProjectsData.items;
@@ -26,7 +26,7 @@ export default function Projects() {
   );
 }
 
-const Badge = styled(BadgeCheck)`
+const Badge = styled(Icons.Check)`
   color: #00a700;
   padding: 0 10px 0 0;
 `;
