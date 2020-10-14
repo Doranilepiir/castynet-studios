@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { HorizontalRule } from "@styled-icons/material-outlined/HorizontalRule";
 
+// Horizontal line, move line to ::Before ::After
+ 
 export default class Intro extends Component {
   render() {
     return (
