@@ -1,16 +1,17 @@
 import React from "react";
 import Intro from "./components/intro";
 import Projects from "./components/projects";
-import { HorizontalRule } from "@styled-icons/material-outlined/HorizontalRule";
 import styled from "styled-components";
-import Particles from "./components/particles";
-import { ExpandOutline } from "@styled-icons/evaicons-outline/ExpandOutline";
+import { Icons } from "./components/utilities";
 import About from "./components/about"
+import Footer from "./components/footer"
+// import Particles from "./components/particles";
+
 
 export default function App() {
   return (
     <>
-      <div
+      {/* <div
         style={{
           position: "absolute",
           top: 0,
@@ -21,25 +22,26 @@ export default function App() {
         }}
       >
         <Particles />
-      </div>
+      </div> */}
       <Intro />
       <Title>
-        <HorizontalRule size="30" />
+        <Icons.Dash size="30" />
         <LineBg>projects</LineBg>
-        <ExpandOutline size="35" color="#ff5722" />
+        <Icons.Expand size="35" color="#ff5722" />
       </Title>
       <Projects />
       <Title>
-        <HorizontalRule size="30" />
+        <Icons.Dash size="30" />
         <LineBg>about</LineBg>
-        <ExpandOutline size="35" color="#ff5722" />
+        <Icons.Expand size="35" color="#ff5722" />
       </Title>
       <About/>
       <Title>
-        <HorizontalRule size="30" />
+        <Icons.Dash size="30" />
         <LineBg>get in touch</LineBg>
-        <ExpandOutline size="23" color="#ff5722" />
+        <Icons.Expand size="23" color="#ff5722" />
       </Title>
+      <Footer/>
     </>
   );
 }
