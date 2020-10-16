@@ -1,50 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
 import Intro from "./components/intro";
 import Projects from "./components/projects";
 import styled from "styled-components";
 import { Icons } from "./components/utilities";
-import About from "./components/about"
-import Footer from "./components/footer"
-// import Particles from "./components/particles";
-
+import About from "./components/about";
+import Footer from "./components/footer";
 
 export default function App() {
+  const [openProjects, setOpenProjects] = useState(false);
+  const [openAbout, setOpenAbout] = useState(false);
+  const [openContact, setOpenContact] = useState(false);
+
+  function toggleOpen(state, setState) {
+    if (state === true) {
+      setState(false);
+    } else {
+      setState(true);
+    }
+    console.log(state);
+  }
+
   return (
     <>
-      {/* <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "70vh",
-          overflow: "hidden",
-        }}
-      >
-        <Particles />
-      </div> */}
       <Intro />
-      <Title>
+
+      <Title onClick={() => toggleOpen(openProjects, setOpenProjects)}>
         <Icons.Dash size="30" />
         <LineBg>projects</LineBg>
-        <Icons.Expand size="35" color="#ff5722" />
+        <Icons.Expand size="30" color="#ff5722" />
       </Title>
-      <Projects />
-      <Title>
+
+      <ProjectsWrap show={openProjects}>
+        <Projects />
+      </ProjectsWrap>
+
+      <Title onClick={() => toggleOpen(openAbout, setOpenAbout)}>
         <Icons.Dash size="30" />
         <LineBg>about</LineBg>
-        <Icons.Expand size="35" color="#ff5722" />
+        <Icons.Expand size="30" color="#ff5722" />
       </Title>
-      <About/>
-      <Title>
+
+      <AboutWrap show={openAbout}>
+        <About />
+      </AboutWrap>
+
+      <Title onClick={() => toggleOpen(openContact, setOpenContact)}>
         <Icons.Dash size="30" />
         <LineBg>get in touch</LineBg>
-        <Icons.Expand size="23" color="#ff5722" />
+        <Icons.Expand size="30" color="#ff5722" />
       </Title>
-      <Footer/>
+
+      <Footer />
     </>
   );
 }
+
+const ProjectsWrap = styled.div`
+  display: ${(props) => (props.show ? "block" : "none")};
+`;
+
+const AboutWrap = styled.div`
+  display: ${(props) => (props.show ? "block" : "none")};
+`;
 
 const LineBg = styled.span`
   display: inline-block;
@@ -57,7 +74,7 @@ const LineBg = styled.span`
     opacity: 20%;
     z-index: -10;
     background-color: #333;
-    margin-left: 2em;
+    margin-left: 1em;
     margin-top: -0.6em;
     border-radius: 1px;
   }
