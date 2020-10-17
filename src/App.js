@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { Icons } from "./components/utilities";
 import About from "./components/about";
 import Footer from "./components/footer";
+import Contact from "./components/contact";
 
 export default function App() {
   const [openProjects, setOpenProjects] = useState(false);
@@ -30,9 +31,9 @@ export default function App() {
         <Icons.Expand size="30" color="#ff5722" />
       </Title>
 
-      <ProjectsWrap show={openProjects}>
+      <ContentWrap show={openProjects}>
         <Projects />
-      </ProjectsWrap>
+      </ContentWrap>
 
       <Title onClick={() => toggleOpen(openAbout, setOpenAbout)}>
         <Icons.Dash size="30" />
@@ -40,9 +41,9 @@ export default function App() {
         <Icons.Expand size="30" color="#ff5722" />
       </Title>
 
-      <AboutWrap show={openAbout}>
+      <ContentWrap show={openAbout}>
         <About />
-      </AboutWrap>
+      </ContentWrap>
 
       <Title onClick={() => toggleOpen(openContact, setOpenContact)}>
         <Icons.Dash size="30" />
@@ -50,16 +51,15 @@ export default function App() {
         <Icons.Expand size="30" color="#ff5722" />
       </Title>
 
+      <ContentWrap show={openContact}>
+        <Contact />
+      </ContentWrap>
+      
       <Footer />
     </>
   );
 }
-
-const ProjectsWrap = styled.div`
-  display: ${(props) => (props.show ? "block" : "none")};
-`;
-
-const AboutWrap = styled.div`
+const ContentWrap = styled.div`
   display: ${(props) => (props.show ? "block" : "none")};
 `;
 
