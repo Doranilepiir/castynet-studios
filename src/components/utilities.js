@@ -7,6 +7,7 @@ import { LinkOutline } from "@styled-icons/evaicons-outline/LinkOutline";
 import { ExpandMore } from "@styled-icons/material-rounded/ExpandMore";
 import { HorizontalRule } from "@styled-icons/material-outlined/HorizontalRule";
 import { BadgeCheck } from "@styled-icons/boxicons-regular/BadgeCheck";
+import { Location } from "@styled-icons/ionicons-sharp/Location";
 
 export const ProjectsData = {
     items: [{
@@ -41,6 +42,7 @@ export const Icons = {
     Expand: ExpandMore,
     Dash: HorizontalRule,
     Check: BadgeCheck,
+    Location: Location,
 }
 
 export const Links = {
