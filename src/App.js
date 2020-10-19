@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import Intro from "./components/intro";
-import Projects from "./components/projects";
 import styled from "styled-components";
 import { Icons } from "./components/utilities";
+import Intro from "./components/intro";
+import Projects from "./components/projects";
 import About from "./components/about";
 import Footer from "./components/footer";
 import Contact from "./components/contact";
+import Particles from "./components/particles"
 
 export default function App() {
   const [openProjects, setOpenProjects] = useState(false);
@@ -56,6 +57,7 @@ export default function App() {
       </ContentWrap>
       
       <Footer />
+      <Particles/>
     </>
   );
 }
