@@ -5,9 +5,16 @@ import { PinterestAlt } from "@styled-icons/boxicons-logos/PinterestAlt";
 import { Instagram } from "@styled-icons/boxicons-logos/Instagram";
 import { LinkOutline } from "@styled-icons/evaicons-outline/LinkOutline";
 import { ExpandMore } from "@styled-icons/material-rounded/ExpandMore";
+import { ExpandLess } from "@styled-icons/material-rounded/ExpandLess";
 import { HorizontalRule } from "@styled-icons/material-outlined/HorizontalRule";
 import { BadgeCheck } from "@styled-icons/boxicons-regular/BadgeCheck";
 import { Location } from "@styled-icons/ionicons-sharp/Location";
+import { Connectdevelop} from "@styled-icons/fa-brands/Connectdevelop";
+import { GearWideConnected } from "@styled-icons/bootstrap/GearWideConnected";
+import { Expand } from "@styled-icons/fa-solid/Expand";
+import { SuitHeart } from "@styled-icons/bootstrap/SuitHeart";
+import { CloudLightning } from "@styled-icons/boxicons-regular/CloudLightning";
+
 
 export const ProjectsData = {
     items: [{
@@ -43,6 +50,12 @@ export const Icons = {
     Dash: HorizontalRule,
     Check: BadgeCheck,
     Location: Location,
+    Connect: Connectdevelop,    
+    Gear: GearWideConnected,
+    ExpandII: Expand,
+    Heart: SuitHeart,
+    Cloud: CloudLightning,
+    ExpandLess: ExpandLess,
 }
 
 export const Links = {
