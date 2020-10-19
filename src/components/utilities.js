@@ -11,7 +11,6 @@ import { BadgeCheck } from "@styled-icons/boxicons-regular/BadgeCheck";
 import { Location } from "@styled-icons/ionicons-sharp/Location";
 import { Connectdevelop} from "@styled-icons/fa-brands/Connectdevelop";
 import { GearWideConnected } from "@styled-icons/bootstrap/GearWideConnected";
-import { Expand } from "@styled-icons/fa-solid/Expand";
 import { SuitHeart } from "@styled-icons/bootstrap/SuitHeart";
 import { CloudLightning } from "@styled-icons/boxicons-regular/CloudLightning";
 
@@ -52,7 +51,6 @@ export const Icons = {
     Location: Location,
     Connect: Connectdevelop,    
     Gear: GearWideConnected,
-    ExpandII: Expand,
     Heart: SuitHeart,
     Cloud: CloudLightning,
     ExpandLess: ExpandLess,
