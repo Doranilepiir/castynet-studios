@@ -6,6 +6,7 @@ body {
     url(./static/castynet_background_image.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 * {
