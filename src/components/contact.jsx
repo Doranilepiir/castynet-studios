@@ -67,7 +67,7 @@ const Message = styled.textarea`
 `;
 
 const ContactDetails = styled.address`
-  background-color: rgb(180 180 189 / 0.1);
+  background-color: rgb(200 200 209 / 0.3);
   padding: 40px 30px 50px;
   width: 340px;
   height: fit-content;
@@ -89,7 +89,7 @@ const ContactDetails = styled.address`
 `;
 
 const ContactForm = styled.form`
-  background-color: rgb(180 180 189 / 0.1);
+  background-color: rgb(200 200 209 / 0.3);
   padding: 20px 20px 30px 20px;
   width: 380px;
   border-radius: 4px;
