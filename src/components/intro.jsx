@@ -29,7 +29,7 @@ const Underline = styled.span`
 `;
 
 const Wrapper = styled.div`
-  margin-top: 20vh;
+  margin-top: 15vh;
   height: 50vh;
 `;
 
