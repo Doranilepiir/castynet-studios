@@ -1,12 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Icons } from "./utilities";
 
 export default function Contact() {
+  const [alertMsg, setAlertMsg] = useState("");
+
+  const HandleSubmit = (evt) => {
+    evt.preventDefault();
+    sendMessage();
+  };
+
+  const sendMessage = async () => {
+    setAlertMsg("Creating");
+    try {
+      // await
+    } catch (err) {
+      // show error
+    }
+  };
+
   return (
     <>
       <ContactWrap>
-        <ContactForm autocomplete="on">
+        <ContactForm autocomplete="on" onSubmit={HandleSubmit}>
           <label htmlFor="name">Name:</label>
           <input id="name" type="text" required />
 
@@ -41,6 +57,10 @@ export default function Contact() {
     </>
   );
 }
+
+// Logic
+
+// Styles
 const U = styled.span`
   color: #ff0057;
   text-decoration: underline;
