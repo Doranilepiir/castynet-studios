@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { Icons } from "./utilities";
 
 export default function Contact() {
   const [alertMsg, setAlertMsg] = useState("");
@@ -49,7 +48,7 @@ export default function Contact() {
             </a>
           </Detail>
           <Detail>
-            <Icons.Location size="20" color="#388E3C" />
+            Location:{"  "}
             <u>Online &amp; Around the Planet</u>
           </Detail>
         </ContactDetails>
@@ -87,7 +86,7 @@ const Message = styled.textarea`
 `;
 
 const ContactDetails = styled.address`
-  background-color: rgb(200 200 209 / 0.3);
+  background-color: rgb(206 233 255 / 80%);
   padding: 40px 30px 50px;
   width: 340px;
   height: fit-content;
@@ -100,6 +99,7 @@ const ContactDetails = styled.address`
   &:hover {
     box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),
       0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+    background-color: rgb(206 233 255 / 80%);
   }
   a {
     padding: 0 0 0 10px;
@@ -109,7 +109,7 @@ const ContactDetails = styled.address`
 `;
 
 const ContactForm = styled.form`
-  background-color: rgb(200 200 209 / 0.3);
+  background-color: rgb(206 233 255 / 80%);
   padding: 20px 20px 30px 20px;
   width: 380px;
   border-radius: 4px;
@@ -119,6 +119,7 @@ const ContactForm = styled.form`
   &:hover {
     box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),
       0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+    background-color: rgb(206 233 255 / 90%);
   }
 
   input {
