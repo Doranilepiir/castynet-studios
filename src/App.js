@@ -6,7 +6,7 @@ import Projects from "./components/projects";
 import About from "./components/about";
 import Footer from "./components/footer";
 import Contact from "./components/contact";
-import Particles from "./components/particles"
+import Particles from "./components/particles";
 
 export default function App() {
   const [openProjects, setOpenProjects] = useState(false);
@@ -19,7 +19,23 @@ export default function App() {
     } else {
       setState(true);
     }
-    console.log(state);
+  }
+  function RtProjects() {
+    return ShowIcon(openProjects);
+  }
+  function RtAbout() {
+    return ShowIcon(openAbout);
+  }
+  function RtContact() {
+    return ShowIcon(openContact);
+  }
+
+  function ShowIcon(open) {
+    if (open === true) {
+      return <Rotate />;
+    } else if (open === false) {
+      return <Icons.Expand size="30" color="#ff5722" />;
+    }
   }
 
   return (
@@ -29,7 +45,7 @@ export default function App() {
       <Title onClick={() => toggleOpen(openProjects, setOpenProjects)}>
         <Icons.Dash size="30" />
         <LineBg>projects</LineBg>
-        <Icons.Expand size="30" color="#ff5722" />
+        <RtProjects />
       </Title>
 
       <ContentWrap show={openProjects}>
@@ -39,7 +55,7 @@ export default function App() {
       <Title onClick={() => toggleOpen(openAbout, setOpenAbout)}>
         <Icons.Dash size="30" />
         <LineBg>about</LineBg>
-        <Icons.Expand size="30" color="#ff5722" />
+        <RtAbout />
       </Title>
 
       <ContentWrap show={openAbout}>
@@ -49,18 +65,25 @@ export default function App() {
       <Title onClick={() => toggleOpen(openContact, setOpenContact)}>
         <Icons.Dash size="30" />
         <LineBg>get in touch</LineBg>
-        <Icons.Expand size="30" color="#ff5722" />
+        <RtContact />
       </Title>
 
       <ContentWrap show={openContact}>
         <Contact />
       </ContentWrap>
-      
+
       <Footer />
-      <Particles/>
+      <Particles />
     </>
   );
 }
+
+const Rotate = styled(Icons.Expand)`
+  width: 30px;
+  color: #ff5722;
+  transform: rotate(180deg);
+`;
+
 const ContentWrap = styled.div`
   display: ${(props) => (props.show ? "block" : "none")};
 `;
