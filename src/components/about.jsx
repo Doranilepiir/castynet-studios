@@ -4,7 +4,7 @@ import { Icons, Links } from "./utilities";
 
 export default function About() {
   const external = "noopener noreferrer external";
-  const blank = "_blank"
+  const blank = "_blank";
 
   return (
     <>
@@ -15,11 +15,11 @@ export default function About() {
         We are high spirited geeks passionate about tech.
         <br />
         Our mission is to create <mark>Empowering Software</mark> across the{" "}
-        <mark>Web</mark> and <mark>Android</mark> platforms.
+        <mark>Web</mark>.
         <br />
         We are powered by coffee, unreal imagination and attention to detail.
         <br />
-        If you have a project that you think would be a great fit for us do{" "}
+        If you have a project you think would be a fit for us do{" "}
         <mark>reach out</mark>.
       </AboutDescription>
       <Rating>
@@ -39,7 +39,7 @@ export default function About() {
         </a>
         <a href={Links.Instagram} target={blank} rel={external}>
           <li>
-            1.8k Supporters <Icons.Instagram size="20" />
+            1.8k Peers <Icons.Instagram size="20" />
           </li>
         </a>
         <a href={Links.Twitter} target={blank} rel={external}>
@@ -50,10 +50,10 @@ export default function About() {
       </Stats>
       <Services>
         <ListTitle>Services</ListTitle>
-        <li>Web Design</li>
-        <li>Software Development</li>
-        <li>UI/UX Design</li>
         <li>Web Development</li>
+        <li>Web Design</li>
+        <li>Wordpress</li>
+        <li>UI/UX Design</li>
         <li>Graphic Design</li>
       </Services>
       <Technologies>
