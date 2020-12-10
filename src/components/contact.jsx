@@ -4,15 +4,36 @@ import styled from "styled-components";
 export default function Contact() {
   const [alertMsg, setAlertMsg] = useState("");
 
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+
+  var postData = {
+    Email: email,
+    Name: name,
+    Phone: phone,
+    Message: message,
+  };
+
   const HandleSubmit = (evt) => {
     evt.preventDefault();
     sendMessage();
   };
 
   const sendMessage = async () => {
-    setAlertMsg("Creating");
+    setAlertMsg("Sending");
     try {
-      // await
+      fetch(
+        "https://contactapi.genztech.xyz/api/collections/save/Contact?token=account-8e89bdf2d0aedf7cc73fe83b4f5ee1",
+        {
+          method: "post",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            data: postData,
+          }),
+        }
+      ).then((res) => res.json());
     } catch (err) {
       // show error
     }
@@ -23,16 +44,35 @@ export default function Contact() {
       <ContactWrap>
         <ContactForm autocomplete="on" onSubmit={HandleSubmit}>
           <label htmlFor="name">Name:</label>
-          <input id="name" type="text" required />
+          <input
+            id="name"
+            type="text"
+            required
+            onChange={(e) => setName(e.target.value)}
+          />
 
           <label htmlFor="email">Email:</label>
-          <input id="email" type="email" required />
+          <input
+            id="email"
+            type="email"
+            required
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
           <label htmlFor="tel">Phone-Nº:</label>
-          <input id="tel" type="tel" />
+          <input
+            id="tel"
+            type="tel"
+            onChange={(e) => setPhone(e.target.value)}
+          />
 
           <label htmlFor="message">Message:</label>
-          <Message id="message" type="text" required />
+          <Message
+            id="message"
+            type="text"
+            required
+            onChange={(e) => setMessage(e.target.value)}
+          />
 
           <input type="submit" value="Submit" />
         </ContactForm>
@@ -79,14 +119,14 @@ const Message = styled.textarea`
   border: none;
   outline: none !important;
   padding: 2px;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #2196f3;
   font-size: 1.2em;
   width: 100%;
   resize: vertical;
 `;
 
 const ContactDetails = styled.address`
-  background-color: rgb(206 233 255 / 80%);
+  background-color: rgb(158 158 158 / 0.4);
   padding: 40px 30px 50px;
   width: 340px;
   height: fit-content;
@@ -109,7 +149,7 @@ const ContactDetails = styled.address`
 `;
 
 const ContactForm = styled.form`
-  background-color: rgb(206 233 255 / 80%);
+  background-color: rgb(158 158 158 / 0.4);
   padding: 20px 20px 30px 20px;
   width: 380px;
   border-radius: 4px;
@@ -129,7 +169,7 @@ const ContactForm = styled.form`
     padding: 2px;
     width: 100%;
     height: 35px;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #2196f3;
     font-size: 1.2em;
   }
   label {
@@ -167,4 +207,5 @@ const ContactWrap = styled.div`
   justify-content: space-evenly;
   align-items: center;
   padding: 1.8em;
+  gap: 10px;
 `;
