@@ -9,9 +9,9 @@ import Contact from "./components/contact";
 import Particles from "./components/particles";
 
 export default function App() {
-  const [openProjects, setOpenProjects] = useState(false);
-  const [openAbout, setOpenAbout] = useState(false);
-  const [openContact, setOpenContact] = useState(false);
+  const [openProjects, setOpenProjects] = useState(true);
+  const [openAbout, setOpenAbout] = useState(true);
+  const [openContact, setOpenContact] = useState(true);
 
   function toggleOpen(state, setState) {
     if (state === true) {
