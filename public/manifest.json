@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Castynet Studios",
+  "name": "Castynet Studios | Empowering Software",
   "icons": [
     {
       "src": "castynet_icon.ico",
@@ -10,6 +10,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#ff0057",
+  "background_color": "#fafaff"
 }
