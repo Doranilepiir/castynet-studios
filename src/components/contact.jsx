@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { Sending, Sent, Error } from "./alert";
 
 export default function Contact() {
   const [alertMsg, setAlertMsg] = useState("");
@@ -8,12 +9,14 @@ export default function Contact() {
   const [phone, setPhone] = useState("");
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
+  const [ref, setRef] = useState("");
 
   var postData = {
     Email: email,
     Name: name,
     Phone: phone,
     Message: message,
+    Reference: ref,
   };
 
   const HandleSubmit = (evt) => {
@@ -24,7 +27,7 @@ export default function Contact() {
   const sendMessage = async () => {
     setAlertMsg("Sending");
     try {
-      fetch(
+      await fetch(
         "https://contactapi.genztech.xyz/api/collections/save/Contact?token=account-8e89bdf2d0aedf7cc73fe83b4f5ee1",
         {
           method: "post",
@@ -33,16 +36,55 @@ export default function Contact() {
             data: postData,
           }),
         }
-      ).then((res) => res.json());
+      ).then(function (result) {
+        if (result.status === 200) {
+          setAlertMsg("Sent");
+        }
+      });
     } catch (err) {
-      // show error
+      setAlertMsg("Error");
     }
   };
 
+  function Alert() {
+    switch (alertMsg) {
+      case "Sending":
+        setTimeout(ClearAlert, 20000);
+        return <Sending />;
+      case "Sent":
+        setTimeout(ClearAlert, 6000);
+        return <Sent />;
+      case "Error":
+        setTimeout(ClearAlert, 10000);
+        return <Error />;
+      default:
+        return "";
+    }
+    function ClearAlert() {
+      setAlertMsg("");
+    }
+  }
+
   return (
     <>
+      <Alert />
       <ContactWrap>
         <ContactForm autocomplete="on" onSubmit={HandleSubmit}>
+          <label htmlFor="reference">RE:</label>
+          <select
+            id="reference"
+            onChange={(e) => setRef(e.target.value)}
+            required
+          >
+            <FirstOption />
+            <option>Website Development</option>
+            <option>Mobile App Dev</option>
+            <option>UI/UX Design</option>
+            <option>Graphic Design</option>
+            <option>Brand Development</option>
+            <option>Other</option>
+          </select>
+
           <label htmlFor="name">Name:</label>
           <input
             id="name"
@@ -74,7 +116,7 @@ export default function Contact() {
             onChange={(e) => setMessage(e.target.value)}
           />
 
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Send" />
         </ContactForm>
         <ContactDetails>
           <Detail>
@@ -100,6 +142,10 @@ export default function Contact() {
 // Logic
 
 // Styles
+const FirstOption = styled.option`
+  display: none;
+`;
+
 const U = styled.span`
   color: #ff0057;
   text-decoration: underline;
@@ -123,6 +169,7 @@ const Message = styled.textarea`
   font-size: 1.2em;
   width: 100%;
   resize: vertical;
+  font-family: "Roboto", sans-serif;
 `;
 
 const ContactDetails = styled.address`
@@ -192,6 +239,19 @@ const ContactForm = styled.form`
       box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),
         0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
     }
+  }
+
+  select {
+    width: 100%;
+    font-size: 1.2rem;
+    height: 40px;
+    background: #fff;
+    line-height: 5px;
+    box-shadow: none;
+    border-width: 0;
+    border-bottom: 2px solid #2196f3;
+    outline: none;
+    margin: 10px 0;
   }
 
   input,
