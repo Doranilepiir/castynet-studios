@@ -11,19 +11,44 @@ export default function Footer() {
       <Wrapper>
         <p>&#169; 2018 - 2020 Castynet Studios - Empowering Software</p>
         <IconsWrap>
-          <a href={Links.Github} target={blank} rel={external}>
+          <a
+            href={Links.Github}
+            target={blank}
+            rel={external}
+            aria-label="Github"
+          >
             <Icons.Github size="25" />
           </a>
-          <a href={Links.Behance} target={blank} rel={external}>
+          <a
+            href={Links.Behance}
+            target={blank}
+            rel={external}
+            aria-label="Behance"
+          >
             <Icons.Behance size="25" />
           </a>
-          <a href={Links.Twitter} target={blank} rel={external}>
+          <a
+            href={Links.Twitter}
+            target={blank}
+            rel={external}
+            aria-label="Twitter"
+          >
             <Icons.Twitter size="25" />
           </a>
-          <a href={Links.Pinterest} target={blank} rel={external}>
+          <a
+            href={Links.Pinterest}
+            target={blank}
+            rel={external}
+            aria-label="Pinterest"
+          >
             <Icons.Pinterest size="25" />
           </a>
-          <a href={Links.Instagram} target={blank} rel={external}>
+          <a
+            href={Links.Instagram}
+            target={blank}
+            rel={external}
+            aria-label="Instagram"
+          >
             <Icons.Instagram size="25" />
           </a>
         </IconsWrap>
