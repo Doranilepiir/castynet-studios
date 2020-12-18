@@ -24,7 +24,12 @@ export default function About() {
       </AboutDescription>
       <Rating>
         <ListTitle>Rating</ListTitle>
-        <a href={Links.GoogleListing} target={blank} rel={external}>
+        <a
+          href={Links.GoogleListing}
+          target={blank}
+          rel={external}
+          aria-label="Rating on Google"
+        >
           <li>
             5/5 Star on Google <Icons.Link size="20" />
           </li>
@@ -32,17 +37,32 @@ export default function About() {
       </Rating>
       <Stats>
         <ListTitle>Stats</ListTitle>
-        <a href={Links.Github} target={blank} rel={external}>
+        <a
+          href={Links.Github}
+          target={blank}
+          rel={external}
+          aria-label="Github"
+        >
           <li>
-            &cong; 847,030 lines of code <Icons.Github size="20" />
+            847,030 lines of code <Icons.Github size="20" />
           </li>
         </a>
-        <a href={Links.Instagram} target={blank} rel={external}>
+        <a
+          href={Links.Instagram}
+          target={blank}
+          rel={external}
+          aria-label="Instagram"
+        >
           <li>
             1.8k Peers <Icons.Instagram size="20" />
           </li>
         </a>
-        <a href={Links.Twitter} target={blank} rel={external}>
+        <a
+          href={Links.Twitter}
+          target={blank}
+          rel={external}
+          aria-label="Twitter"
+        >
           <li>
             970 Tweets <Icons.Twitter size="20" />
           </li>
@@ -91,7 +111,7 @@ const Rating = styled.ul`
 `;
 
 const ListTitle = styled.li`
-  background-color: #ff5722 !important;
+  background-color: #dd3500 !important;
   width: 90px;
   text-align: center;
 `;
