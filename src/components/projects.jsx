@@ -11,13 +11,13 @@ export default function Projects() {
       <Wrapper>
         {projects.map((projects) => (
           <ProjectWrapper key={projects.id}>
-            <Name>
+            <Image src={projects.image} alt={projects.name} />
+            <Type>
               <Badge size="20" />
-              {projects.name}
-            </Name>
-            <Type>{projects.type}</Type>
+              {projects.type}
+            </Type>
             <Button as="a" href={projects.link}>
-              View Project
+              View Project <Icons.Link size="30" />
             </Button>
           </ProjectWrapper>
         ))}
@@ -25,6 +25,10 @@ export default function Projects() {
     </>
   );
 }
+
+const Image = styled.img`
+  width: 100%;
+`;
 
 const Badge = styled(Icons.Check)`
   color: #00a700;
@@ -34,7 +38,7 @@ const Badge = styled(Icons.Check)`
 const ProjectWrapper = styled.div`
   background-color: #fff;
   width: 200px;
-  padding: 20px;
+  padding: 10px;
   border-radius: 2px;
 
   &:hover {
@@ -56,13 +60,25 @@ const Wrapper = styled.div`
 const Button = styled.button`
   text-align: center;
   margin: 0 0 1em 0;
-`;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  color: #dd3500;
 
-const Name = styled.h2`
-  width: 100%;
-  margin: 0 0 1em 0;
+  &:before {
+    content: "";
+    width: 100px;
+    background-color: #0176d3;
+    height: 8px;
+    position: absolute;
+    margin-top: 10px;
+    opacity: 0;
+  }
+
+  &:hover:before {
+    opacity: 0.3;
+  }
 `;
 
 const Type = styled.p`
-  margin: 0 0 1em 0;
+  margin: 0.5em 0 1em 0;
 `;
