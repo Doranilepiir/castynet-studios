@@ -102,7 +102,7 @@ const Cloud = styled(Icons.Cloud)`
   width: 20px;
   animation-name: ${cloudAnimation};
   animation-duration: 10s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 3;
   animation-timing-function: ease-in-out;
   animation-delay: 8s;
   color: #88a;
