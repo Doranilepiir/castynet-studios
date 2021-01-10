@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Icons, Links } from "./utilities";
+import { Year } from "./helpers";
 
 export default function Footer() {
   const external = "noopener noreferrer external";
@@ -9,7 +10,7 @@ export default function Footer() {
   return (
     <>
       <Wrapper>
-        <p>&#169; 2018 - 2020 Castynet Studios - Empowering Software</p>
+        <p>&#169; 2018 - {Year()} Castynet Studios - Empowering Software</p>
         <IconsWrap>
           <a
             href={Links.Github}
