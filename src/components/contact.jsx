@@ -28,12 +28,12 @@ export default function Contact() {
     setAlertMsg("Sending");
     try {
       await fetch(
-        "https://contactapi.genztech.xyz/api/collections/save/Contact?token=account-8e89bdf2d0aedf7cc73fe83b4f5ee1",
+        "https://contact.api.castynet.africa/api/forms/submit/StudiosContact?token=account-8e89bdf2d0aedf7cc73fe83b4f5ee1",
         {
           method: "post",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            data: postData,
+            form: postData,
           }),
         }
       ).then(function (result) {
