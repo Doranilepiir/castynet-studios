@@ -11,8 +11,6 @@ import { BadgeCheck } from "@styled-icons/boxicons-regular/BadgeCheck";
 import { Location } from "@styled-icons/ionicons-sharp/Location";
 import { Connectdevelop } from "@styled-icons/fa-brands/Connectdevelop";
 import { GearWideConnected } from "@styled-icons/bootstrap/GearWideConnected";
-import { SuitHeart } from "@styled-icons/bootstrap/SuitHeart";
-import { CloudLightning } from "@styled-icons/boxicons-regular/CloudLightning";
 
 export const ProjectsData = {
   items: [
@@ -60,8 +58,6 @@ export const Icons = {
   Location: Location,
   Connect: Connectdevelop,
   Gear: GearWideConnected,
-  Heart: SuitHeart,
-  Cloud: CloudLightning,
   ExpandLess: ExpandLess,
 };
 
