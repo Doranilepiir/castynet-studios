@@ -37,7 +37,7 @@ const Badge = styled(Icons.Check)`
 
 const ProjectWrapper = styled.div`
   background-color: #fff;
-  width: 200px;
+  width: 190px;
   padding: 10px;
   border-radius: 2px;
 
@@ -49,7 +49,7 @@ const ProjectWrapper = styled.div`
 const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: start;
   align-content: center;
   grid-auto-flow: column;
   padding: 2.5em;
