@@ -8,7 +8,6 @@ export default function Particles() {
       <Wrapper>
         <Connect />
         <Gear />
-        <Heart />
         <Cloud />
       </Wrapper>
     </>
@@ -26,28 +25,6 @@ const cloudAnimation = keyframes`
   100%{
     left: 100%;
     width: 20px;
-  }
-`;
-
-const heartAnimation = keyframes`
-  0%{
-    transform: scale(0);
-}
-  46% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.3);
-  }
-  52% {
-    transform: scale(1.5);
-  }
-  55%, {
-    transform: scale(3);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(60);
   }
 `;
 
@@ -81,21 +58,6 @@ const Gear = styled(Icons.Gear)`
   left: ${getPositionL()};
   top: ${getPositionT()};
   opacity: 0.3;
-`;
-
-const Heart = styled(Icons.Heart)`
-  width: 20px;
-  animation-name: ${heartAnimation};
-  animation-delay: 4s;
-  animation-duration: 2s;
-  animation-iteration-count: 3;
-  animation-direction: alternate;
-  animation-fill-mode: forwards;
-  color: #ff0057;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  opacity: 0.4;
 `;
 
 const Cloud = styled(Icons.Cloud)`
