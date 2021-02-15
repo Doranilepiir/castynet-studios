@@ -9,9 +9,9 @@ import Contact from "./components/contact";
 import Particles from "./components/particles";
 
 export default function App() {
-  const [openProjects, setOpenProjects] = useState(true);
+  const [openProjects, setOpenProjects] = useState(false);
   const [openAbout, setOpenAbout] = useState(true);
-  const [openContact, setOpenContact] = useState(true);
+  const [openContact, setOpenContact] = useState(false);
 
   function toggleOpen(state, setState) {
     if (state === true) {
@@ -41,37 +41,36 @@ export default function App() {
   return (
     <>
       <Intro />
-
-      <Title onClick={() => toggleOpen(openProjects, setOpenProjects)}>
-        <Icons.Dash size="30" />
-        <LineBg>projects</LineBg>
-        <RtProjects />
-      </Title>
-
-      <ContentWrap show={openProjects}>
-        <Projects />
-      </ContentWrap>
-
+      {/* 🟢 Start About */}
       <Title onClick={() => toggleOpen(openAbout, setOpenAbout)}>
         <Icons.Dash size="30" />
         <LineBg>about</LineBg>
         <RtAbout />
       </Title>
-
       <ContentWrap show={openAbout}>
         <About />
       </ContentWrap>
-
+      {/* 🔴 End About */}
+      {/* 🟢 Start Projects */}
+      <Title onClick={() => toggleOpen(openProjects, setOpenProjects)}>
+        <Icons.Dash size="30" />
+        <LineBg>projects</LineBg>
+        <RtProjects />
+      </Title>
+      <ContentWrap show={openProjects}>
+        <Projects />
+      </ContentWrap>
+      {/* 🔴 End Projects */}
+      {/* 🟢 Start Contact */}
       <Title onClick={() => toggleOpen(openContact, setOpenContact)}>
         <Icons.Dash size="30" />
         <LineBg>get in touch</LineBg>
         <RtContact />
       </Title>
-
       <ContentWrap show={openContact}>
         <Contact />
       </ContentWrap>
-
+      {/* 🔴 End Contact */}
       <Footer />
       <Particles />
     </>
