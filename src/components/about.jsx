@@ -8,136 +8,145 @@ export default function About() {
 
   return (
     <>
-      <AboutDescription>
-        Castynet is a small team of <mark>Software Developers</mark> based in{" "}
-        <mark>Nairobi KE</mark>.
-        <br />
-        We are high spirited geeks passionate about tech.
-        <br />
-        Our mission is to create <mark>Empowering Software</mark> across the{" "}
-        <mark>Web</mark>.
-        <br />
-        We are powered by coffee, unreal imagination and attention to detail.
-        <br />
-        If you have a project you think would be a fit for us do{" "}
-        <mark>reach out</mark>.
-      </AboutDescription>
-      <Rating>
-        <ListTitle>Rating</ListTitle>
-        <a
-          href={Links.GoogleListing}
-          target={blank}
-          rel={external}
-          aria-label="Rating on Google"
-        >
-          <li>
-            5/5 Star on Google <Icons.Link size="20" />
-          </li>
-        </a>
-      </Rating>
-      <Stats>
-        <ListTitle>Stats</ListTitle>
-        <a
-          href={Links.Github}
-          target={blank}
-          rel={external}
-          aria-label="Github"
-        >
-          <li>
-            847,030 lines of code <Icons.Github size="20" />
-          </li>
-        </a>
-        <a
-          href={Links.Instagram}
-          target={blank}
-          rel={external}
-          aria-label="Instagram"
-        >
-          <li>
-            1.8k Peers <Icons.Instagram size="20" />
-          </li>
-        </a>
-        <a
-          href={Links.Twitter}
-          target={blank}
-          rel={external}
-          aria-label="Twitter"
-        >
-          <li>
-            970 Tweets <Icons.Twitter size="20" />
-          </li>
-        </a>
-      </Stats>
-      <Services>
-        <ListTitle>Services</ListTitle>
-        <li>Web Development</li>
-        <li>Web Design</li>
-        <li>Wordpress</li>
-        <li>UI/UX Design</li>
-        <li>Graphic Design</li>
-      </Services>
-      <Technologies>
-        <ListTitle>Tools</ListTitle>
-        <li>JavaScript</li>
-        <li>ReactJs</li>
-        <li>NodeJS</li>
-        <li>Headless CMS/s</li>
-        <li>Illustrator</li>
-        <li>PhotoShop</li>
-        <li>React Native</li>
-        <li>Android</li>
-      </Technologies>
+      <Wrapper>
+        <AboutDescription>
+          Castynet is a small team of <mark>Software Developers</mark> based in{" "}
+          <mark>Nairobi KE</mark>, We are high spirited geeks passionate about
+          tech.
+          <br />
+          Our mission is to create <mark>Empowering Software</mark> across the{" "}
+          <mark>Web</mark>. We are powered by coffee, unreal imagination and
+          attention to detail. If you have a project you think would be a fit
+          for us do <mark>reach out</mark>.
+        </AboutDescription>
+        <Rating>
+          <ListTitle>appraised at</ListTitle>
+          <a
+            href={Links.GoogleListing}
+            target={blank}
+            rel={external}
+            aria-label="Rating on Google"
+          >
+            <li>
+              5/5 Star on Google <Icons.Link size="20" />
+            </li>
+          </a>
+        </Rating>
+        <Stats>
+          <ListTitle>statistik-ally</ListTitle>
+          <a
+            href={Links.Github}
+            target={blank}
+            rel={external}
+            aria-label="Github"
+          >
+            <li>
+              847,030 lines of code <Icons.Github size="20" />
+            </li>
+          </a>
+          <a
+            href={Links.Instagram}
+            target={blank}
+            rel={external}
+            aria-label="Instagram"
+          >
+            <li>
+              1.8k Peers <Icons.Instagram size="20" />
+            </li>
+          </a>
+          <a
+            href={Links.Twitter}
+            target={blank}
+            rel={external}
+            aria-label="Twitter"
+          >
+            <li>
+              285 Tweets <Icons.Twitter size="20" />
+            </li>
+          </a>
+        </Stats>
+        <Services>
+          <ListTitle>masters of</ListTitle>
+          <li>Web Development</li>
+          <li>Web Design</li>
+          <li>Wordpress</li>
+          <li>UI/UX Design</li>
+          <li>Graphic Design</li>
+        </Services>
+        <Technologies>
+          <ListTitle>dev kit</ListTitle>
+          <li>JavaScript</li>
+          <li>ReactJs</li>
+          <li>NodeJS</li>
+          <li>Headless CMS/s</li>
+          <li>Illustrator</li>
+          <li>PhotoShop</li>
+          <li>React Native</li>
+        </Technologies>
+      </Wrapper>
     </>
   );
 }
 
+const Wrapper = styled.div`
+  font-family: "Teko", sans-serif;
+  letter-spacing: 1px;
+  font-size: 1.4em;
+  letter-spacing: 1px;
+`;
+
 const AboutDescription = styled.p`
-  font-size: 1.5em;
   padding: 0 20px;
   line-height: 1.5em;
+  font-size: 1.1em;
 `;
 
 const Rating = styled.ul`
   padding: 20px 0 10px 20px;
   li {
     display: inline-block;
-    padding: 5px;
+    padding: 1px 10px;
     margin: 5px;
-    border-radius: 2px;
+    border-radius: 3px;
     background-color: #006a04;
     color: #fff;
-    letter-spacing: 1px;
+    font-weight: 300;
   }
 `;
 
 const ListTitle = styled.li`
-  background-color: #dd3500 !important;
-  width: 90px;
+  background-color: #fff !important;
+  width: 120px;
   text-align: center;
+  color: #dd3500 !important;
+  border: solid 1px #000;
+  padding: 1px !important;
+  font-weight: normal !important;
+  letter-spacing: 0 !important;
 `;
 
 const Services = styled.ul`
   padding: 10px 0 10px 20px;
   li {
     display: inline-block;
-    padding: 5px;
+    padding: 1px 10px;
     margin: 5px;
-    border-radius: 2px;
+    border-radius: 3px;
     background-color: #006a04;
     color: #fff;
-    letter-spacing: 1px;
+    font-weight: 300;
   }
 `;
 const Technologies = styled.ul`
   padding: 10px 0 10px 20px;
   li {
     display: inline-block;
-    padding: 5px;
+    padding: 1px 10px;
     margin: 5px;
-    border-radius: 2px;
+    border-radius: 3px;
     background-color: #006a04;
     color: #fff;
-    letter-spacing: 1px;
+    font-weight: 300;
   }
 `;
 
@@ -145,11 +154,11 @@ const Stats = styled.ul`
   padding: 10px 0 10px 20px;
   li {
     display: inline-block;
-    padding: 5px;
+    padding: 1px 10px;
     margin: 5px;
-    border-radius: 2px;
+    border-radius: 3px;
     background-color: #006a04;
     color: #fff;
-    letter-spacing: 1px;
+    font-weight: 300;
   }
 `;
