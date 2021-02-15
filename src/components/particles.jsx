@@ -8,25 +8,10 @@ export default function Particles() {
       <Wrapper>
         <Connect />
         <Gear />
-        <Cloud />
       </Wrapper>
     </>
   );
 }
-
-const cloudAnimation = keyframes`
-  0%{
-    left: 0;
-    width: 20px;
-  }
-  50% { 
-    width: 40px;
-    opacity: .3;}
-  100%{
-    left: 100%;
-    width: 20px;
-  }
-`;
 
 const gearAnimation = keyframes`
   from {
@@ -58,23 +43,6 @@ const Gear = styled(Icons.Gear)`
   left: ${getPositionL()};
   top: ${getPositionT()};
   opacity: 0.3;
-`;
-
-const Cloud = styled(Icons.Cloud)`
-  width: 20px;
-  animation-name: ${cloudAnimation};
-  animation-duration: 10s;
-  animation-iteration-count: 3;
-  animation-timing-function: ease-in-out;
-  animation-delay: 8s;
-  color: #88a;
-  position: absolute;
-  left: 0%;
-  top: 10%;
-  opacity: 0.3;
-  @media (max-width: 425px) {
-    animation-duration: 5s;
-  }
 `;
 
 const Wrapper = styled.div`
