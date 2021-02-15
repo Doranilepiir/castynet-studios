@@ -28,7 +28,7 @@ const Underline = styled.span`
 
 const Wrapper = styled.div`
   margin-top: 15vh;
-  height: 50vh;
+  height: 40vh;
 `;
 
 const Title = styled.h1`
