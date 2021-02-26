@@ -6,7 +6,6 @@ import Projects from "./components/projects";
 import About from "./components/about";
 import Footer from "./components/footer";
 import Contact from "./components/contact";
-import Particles from "./components/particles";
 
 export default function App() {
   const [openProjects, setOpenProjects] = useState(false);
@@ -23,9 +22,6 @@ export default function App() {
   function RtProjects() {
     return ShowIcon(openProjects);
   }
-  function RtAbout() {
-    return ShowIcon(openAbout);
-  }
   function RtContact() {
     return ShowIcon(openContact);
   }
@@ -41,16 +37,7 @@ export default function App() {
   return (
     <>
       <Intro />
-      {/* 🟢 Start About */}
-      <Title onClick={() => toggleOpen(openAbout, setOpenAbout)}>
-        <Icons.Dash size="30" />
-        <LineBg>about</LineBg>
-        <RtAbout />
-      </Title>
-      <ContentWrap show={openAbout}>
-        <About />
-      </ContentWrap>
-      {/* 🔴 End About */}
+
       {/* 🟢 Start Projects */}
       <Title onClick={() => toggleOpen(openProjects, setOpenProjects)}>
         <Icons.Dash size="30" />
@@ -71,15 +58,23 @@ export default function App() {
         <Contact />
       </ContentWrap>
       {/* 🔴 End Contact */}
+      {/* 🟢 Start About */}
+      <Title>
+        <Icons.Dash size="30" />
+        <LineBg>about</LineBg>
+      </Title>
+      <ContentWrap show={openAbout}>
+        <About />
+      </ContentWrap>
+      {/* 🔴 End About */}
       <Footer />
-      <Particles />
     </>
   );
 }
 
 const Rotate = styled(Icons.Expand)`
   width: 30px;
-  color: #ff5722;
+  color: #607d8b;
   transform: rotate(180deg);
 `;
 
@@ -108,7 +103,8 @@ const Title = styled.h2`
   margin: 1em 0 1em 2em;
   font-size: 1.8em;
   width: fit-content;
-  color: #1f2762;
+  color: #005d8a;
+  font-family: "Roboto Mono", monospace;
   &:hover {
     cursor: pointer;
   }
