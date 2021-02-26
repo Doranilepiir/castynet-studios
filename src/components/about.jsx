@@ -10,14 +10,17 @@ export default function About() {
     <>
       <Wrapper>
         <AboutDescription>
-          Castynet is a small team of <mark>Software Developers</mark> based in{" "}
-          <mark>Nairobi KE</mark>, We are high spirited geeks passionate about
-          tech.
+          Castynet is a small team of{" "}
+          <span className="marked">Software Developers</span> based in{" "}
+          <span className="marked">Nairobi KE</span>, We are high spirited geeks
+          passionate about tech.
           <br />
-          Our mission is to create <mark>Empowering Software</mark> across the{" "}
-          <mark>Web</mark>. We are powered by coffee, unreal imagination and
-          attention to detail. If you have a project you think would be a fit
-          for us do <mark>reach out</mark>.
+          Our mission is to create{" "}
+          <span className="marked">Empowering Software</span> across the{" "}
+          <span className="marked">Web</span>. We are powered by coffee, unreal
+          imagination and attention to detail. <br />
+          If you have a project you think would be a fit for us do{" "}
+          <span className="marked">reach out</span>.
         </AboutDescription>
         <Rating>
           <ListTitle>appraised at</ListTitle>
@@ -92,13 +95,13 @@ const Wrapper = styled.div`
   font-family: "Teko", sans-serif;
   letter-spacing: 1px;
   font-size: 1.4em;
-  letter-spacing: 1px;
 `;
 
-const AboutDescription = styled.p`
+const AboutDescription = styled.main`
   padding: 0 20px;
   line-height: 1.5em;
   font-size: 1.1em;
+  text-align: center;
 `;
 
 const Rating = styled.ul`
@@ -108,7 +111,7 @@ const Rating = styled.ul`
     padding: 1px 10px;
     margin: 5px;
     border-radius: 3px;
-    background-color: #006a04;
+    background-color: #607d8b;
     color: #fff;
     font-weight: 300;
   }
@@ -118,8 +121,8 @@ const ListTitle = styled.li`
   background-color: #fff !important;
   width: 120px;
   text-align: center;
-  color: #dd3500 !important;
-  border: solid 1px #000;
+  color: #607d8b !important;
+  border: solid 1px #607d8b;
   padding: 1px !important;
   font-weight: normal !important;
   letter-spacing: 0 !important;
@@ -132,7 +135,7 @@ const Services = styled.ul`
     padding: 1px 10px;
     margin: 5px;
     border-radius: 3px;
-    background-color: #006a04;
+    background-color: #607d8b;
     color: #fff;
     font-weight: 300;
   }
@@ -144,7 +147,7 @@ const Technologies = styled.ul`
     padding: 1px 10px;
     margin: 5px;
     border-radius: 3px;
-    background-color: #006a04;
+    background-color: #607d8b;
     color: #fff;
     font-weight: 300;
   }
@@ -157,7 +160,7 @@ const Stats = styled.ul`
     padding: 1px 10px;
     margin: 5px;
     border-radius: 3px;
-    background-color: #006a04;
+    background-color: #607d8b;
     color: #fff;
     font-weight: 300;
   }
