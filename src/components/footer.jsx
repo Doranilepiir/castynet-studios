@@ -58,16 +58,18 @@ export default function Footer() {
   );
 }
 
-const Wrapper = styled.div`
-  background-color: rgb(33 150 243 / 0.1);
+const Wrapper = styled.footer`
+  background-color: #1f2762;
   padding: 25px 0;
+  margin-top: 40px;
 
   p {
-    color: #000033;
+    color: #fff;
     font-weight: 600;
     text-align: center;
     text-transform: lowercase;
     width: 100%;
+    letter-spacing: 1px;
   }
 `;
 
