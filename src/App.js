@@ -9,7 +9,6 @@ import Contact from "./components/contact";
 
 export default function App() {
   const [openProjects, setOpenProjects] = useState(false);
-  const [openAbout, setOpenAbout] = useState(true);
   const [openContact, setOpenContact] = useState(false);
 
   function toggleOpen(state, setState) {
@@ -63,7 +62,7 @@ export default function App() {
         <Icons.Dash size="30" />
         <LineBg>about</LineBg>
       </Title>
-      <ContentWrap show={openAbout}>
+      <ContentWrap show="true">
         <About />
       </ContentWrap>
       {/* 🔴 End About */}
