@@ -115,6 +115,9 @@ const Rating = styled.ul`
     color: #fff;
     font-weight: 300;
   }
+  a li:hover {
+    background-color: #ff5722;
+  }
 `;
 
 const ListTitle = styled.li`
@@ -139,7 +142,11 @@ const Services = styled.ul`
     color: #fff;
     font-weight: 300;
   }
+  li:hover {
+    cursor: default;
+  }
 `;
+
 const Technologies = styled.ul`
   padding: 10px 0 10px 20px;
   li {
@@ -150,6 +157,9 @@ const Technologies = styled.ul`
     background-color: #607d8b;
     color: #fff;
     font-weight: 300;
+  }
+  li:hover {
+    cursor: default;
   }
 `;
 
@@ -163,5 +173,8 @@ const Stats = styled.ul`
     background-color: #607d8b;
     color: #fff;
     font-weight: 300;
+  }
+  a li:hover {
+    background-color: #ff5722;
   }
 `;
