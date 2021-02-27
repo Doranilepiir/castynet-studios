@@ -85,10 +85,10 @@ const IconsWrap = styled.div`
   padding: 5px 20px 0 20px;
 
   a {
-    color: #ff0057;
+    color: #ffeb3b;
 
     &:hover {
-      color: #0176d3;
+      color: #ff5722;
     }
   }
 `;
