@@ -1,12 +1,15 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import CastynetAnimated from "./castynetAnimation";
 
 export default class Intro extends Component {
   render() {
     return (
       <>
         <Wrapper>
-          <Title>Castynet Studios</Title>
+          <Title>
+            <CastynetAnimated />
+          </Title>
           <Description>Empowering Software</Description>
           <Text>
             we create <span className="marked">elegant software products</span>{" "}
@@ -31,9 +34,6 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 3em;
-  letter-spacing: 2px;
-  color: rgb(31, 39, 98);
   padding-bottom: 10px;
 `;
 
