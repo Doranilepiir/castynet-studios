@@ -33,40 +33,43 @@ export default function App() {
     }
   }
 
+
   return (
     <>
-      <Intro />
+      <div className="animate">
+        <Intro />
 
-      {/* 🟢 Start Projects */}
-      <Title onClick={() => toggleOpen(openProjects, setOpenProjects)}>
-        <Icons.Dash size="30" />
-        <LineBg>projects</LineBg>
-        <RtProjects />
-      </Title>
-      <ContentWrap show={openProjects}>
-        <Projects />
-      </ContentWrap>
-      {/* 🔴 End Projects */}
-      {/* 🟢 Start Contact */}
-      <Title onClick={() => toggleOpen(openContact, setOpenContact)}>
-        <Icons.Dash size="30" />
-        <LineBg>get in touch</LineBg>
-        <RtContact />
-      </Title>
-      <ContentWrap show={openContact}>
-        <Contact />
-      </ContentWrap>
-      {/* 🔴 End Contact */}
-      {/* 🟢 Start About */}
-      <Title>
-        <Icons.Dash size="30" />
-        <LineBg>about</LineBg>
-      </Title>
-      <ContentWrap show="true">
-        <About />
-      </ContentWrap>
-      {/* 🔴 End About */}
-      <Footer />
+        {/* 🟢 Start Projects */}
+        <Title onClick={() => toggleOpen(openProjects, setOpenProjects)}>
+          <Icons.Dash size="30" />
+          <LineBg>projects</LineBg>
+          <RtProjects />
+        </Title>
+        <ContentWrap show={openProjects}>
+          <Projects />
+        </ContentWrap>
+        {/* 🔴 End Projects */}
+        {/* 🟢 Start Contact */}
+        <Title onClick={() => toggleOpen(openContact, setOpenContact)}>
+          <Icons.Dash size="30" />
+          <LineBg>get in touch</LineBg>
+          <RtContact />
+        </Title>
+        <ContentWrap show={openContact}>
+          <Contact />
+        </ContentWrap>
+        {/* 🔴 End Contact */}
+        {/* 🟢 Start About */}
+        <Title>
+          <Icons.Dash size="30" />
+          <LineBg>about</LineBg>
+        </Title>
+        <ContentWrap show="true">
+          <About />
+        </ContentWrap>
+        {/* 🔴 End About */}
+        <Footer />
+      </div>
     </>
   );
 }
