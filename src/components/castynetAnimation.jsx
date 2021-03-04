@@ -106,6 +106,8 @@ export default function () {
 }
 
 const SvgWrap = styled.svg`
+  max-width: 100%;
+
   path {
     fill: inherit;
   }
