@@ -33,7 +33,6 @@ export default function App() {
     }
   }
 
-
   return (
     <>
       <div className="animate">
@@ -102,7 +101,7 @@ const LineBg = styled.span`
 `;
 
 const Title = styled.h2`
-  margin: 1em 0 1em 2em;
+  margin: 1em 0 1em 1em;
   font-size: 1.8em;
   width: fit-content;
   color: #005d8a;
