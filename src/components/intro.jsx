@@ -22,7 +22,10 @@ export default class Intro extends Component {
 }
 const Text = styled.p`
   font-family: "Roboto Mono", monospace;
-  font-size: 1.5em;
+  padding: 0 20px;
+  line-height: 1.5em;
+  font-size: 1.1em;
+  text-align: center;
 `;
 
 const Wrapper = styled.div`
@@ -34,7 +37,8 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h1`
-  padding-bottom: 10px;
+  padding: 0 10px 10px;
+  max-width: 100%;
 `;
 
 const Description = styled.h2`
