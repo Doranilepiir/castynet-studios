@@ -21,4 +21,5 @@ const ContactWrap = styled.p`
   font-size: 1.5em;
   text-align: center;
   letter-spacing: 1px;
+  padding: 0 20px;
 `;
