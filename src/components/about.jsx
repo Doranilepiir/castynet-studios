@@ -111,7 +111,7 @@ const Rating = styled.ul`
     padding: 1px 10px;
     margin: 5px;
     border-radius: 3px;
-    background-color: #607d8b;
+    background-color: #304d5b;
     color: #fff;
     font-weight: 300;
   }
@@ -124,8 +124,8 @@ const ListTitle = styled.li`
   background-color: #fff !important;
   width: 120px;
   text-align: center;
-  color: #607d8b !important;
-  border: solid 1px #607d8b;
+  color: #304d5b !important;
+  border: solid 1px #304d5b;
   padding: 1px !important;
   font-weight: normal !important;
   letter-spacing: 0 !important;
@@ -138,7 +138,7 @@ const Services = styled.ul`
     padding: 1px 10px;
     margin: 5px;
     border-radius: 3px;
-    background-color: #607d8b;
+    background-color: #304d5b;
     color: #fff;
     font-weight: 300;
   }
@@ -154,7 +154,7 @@ const Technologies = styled.ul`
     padding: 1px 10px;
     margin: 5px;
     border-radius: 3px;
-    background-color: #607d8b;
+    background-color: #304d5b;
     color: #fff;
     font-weight: 300;
   }
@@ -170,7 +170,7 @@ const Stats = styled.ul`
     padding: 1px 10px;
     margin: 5px;
     border-radius: 3px;
-    background-color: #607d8b;
+    background-color: #304d5b;
     color: #fff;
     font-weight: 300;
   }

@@ -44,7 +44,7 @@ const Title = styled.h1`
 const Description = styled.h2`
   font-size: 2.5em;
   letter-spacing: 1px;
-  color: #607d8b;
+  color: #304d5b;
   font-weight: 400;
   font-family: "Teko", sans-serif;
   padding-bottom: 10px;
