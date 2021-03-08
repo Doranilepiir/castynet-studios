@@ -40,6 +40,7 @@ const ProjectWrapper = styled.div`
   width: 190px;
   padding: 10px;
   border-radius: 2px;
+  margin: 10px;
 
   &:hover {
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.98), 0 2px 10px 0 rgba(0, 0, 0, 0.98);
@@ -49,12 +50,11 @@ const ProjectWrapper = styled.div`
 const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: center;
   align-content: center;
   grid-auto-flow: column;
   padding: 2.5em;
   background-color: rgb(0 0 0 / 0.8);
-  gap: 2em;
 `;
 
 const Button = styled.button`
