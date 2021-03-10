@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import { Icons } from "./components/utilities";
 import Intro from "./components/intro";
@@ -11,10 +11,15 @@ export default function App() {
   const [openProjects, setOpenProjects] = useState(false);
   const [openContact, setOpenContact] = useState(false);
 
-  function toggleOpen(state, setState) {
+  const eProject = useRef(null),
+    eContact = useRef(null);
+
+  function toggleOpen(state, setState, element) {
     if (state === true) {
+      element.current.scrollIntoView(false);
       setState(false);
     } else {
+      element.current.scrollIntoView(true);
       setState(true);
     }
   }
@@ -39,9 +44,11 @@ export default function App() {
         <Intro />
 
         {/* 🟢 Start Projects */}
-        <Title onClick={() => toggleOpen(openProjects, setOpenProjects)}>
+        <Title
+          onClick={() => toggleOpen(openProjects, setOpenProjects, eProject)}
+        >
           <Icons.Dash size="30" />
-          <LineBg>projects</LineBg>
+          <LineBg ref={eProject}>projects</LineBg>
           <RtProjects />
         </Title>
         <ContentWrap show={openProjects}>
@@ -49,9 +56,11 @@ export default function App() {
         </ContentWrap>
         {/* 🔴 End Projects */}
         {/* 🟢 Start Contact */}
-        <Title onClick={() => toggleOpen(openContact, setOpenContact)}>
+        <Title
+          onClick={() => toggleOpen(openContact, setOpenContact, eContact)}
+        >
           <Icons.Dash size="30" />
-          <LineBg>get in touch</LineBg>
+          <LineBg ref={eContact}>get in touch</LineBg>
           <RtContact />
         </Title>
         <ContentWrap show={openContact}>
