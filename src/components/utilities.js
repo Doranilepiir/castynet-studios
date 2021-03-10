@@ -36,7 +36,7 @@ export const ProjectsData = {
       image: "../static/genztech_logo.png",
     },
     {
-      id: 3,
+      id: 4,
       name: "shop.genztech.xyz",
       type: "In-house Brand",
       link: "/",
