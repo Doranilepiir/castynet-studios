@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 
 export default function () {
   return (
@@ -9,8 +9,7 @@ export default function () {
         height="59"
         viewBox="0 0 420 59"
         fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+        xmlns="http://www.w3.org/2000/svg">
         <rect width="420" height="59" fill="transparent" />
         <g id="castynet svg 1">
           <g id="castynet">
@@ -82,11 +81,7 @@ export default function () {
                 d="M348.67 10.79C348.67 9.66 349.08 8.7 349.89 7.89C350.7 7.08 351.67 6.67 352.79 6.67C353.93 6.67 354.91 7.07 355.73 7.87C356.55 8.67 356.96 9.64 356.96 10.79C356.96 11.94 356.55 12.91 355.73 13.72C354.91 14.53 353.93 14.94 352.79 14.94C351.66 14.94 350.7 14.53 349.89 13.7C349.08 12.86 348.67 11.89 348.67 10.79Z"
                 fill="black"
               />
-              <path
-                id="Vector_14"
-                d="M356.34 20.79H349.29V45.14H356.34V20.79Z"
-                fill="black"
-              />
+              <path id="Vector_14" d="M356.34 20.79H349.29V45.14H356.34V20.79Z" fill="black" />
             </g>
             <path
               id="Vector_15"
@@ -102,7 +97,7 @@ export default function () {
         </g>
       </SvgWrap>
     </>
-  );
+  )
 }
 
 const SvgWrap = styled.svg`
@@ -137,10 +132,10 @@ const SvgWrap = styled.svg`
       stroke-dasharray: 140 540;
       stroke-dashoffset: -474;
       stroke-width: 8px;
-      fill: rgb(255, 87, 34);
+      fill: rgb(48 77 91);
     }
     20% {
-      fill: rgb(255, 87, 34);
+      fill: rgb(48 77 91);
     }
     66.6% {
       stroke-dasharray: 760;
@@ -156,4 +151,4 @@ const SvgWrap = styled.svg`
       fill: rgb(31, 39, 98);
     }
   }
-`;
+`
