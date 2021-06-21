@@ -27,7 +27,7 @@ export default function App() {
   }
 
   let ShowIcon = (open) =>
-    open === true ? <Styled.Rotate /> : <Icons.Expand size="30" color="#ff5722" />
+    open === true ? <Styled.Rotate /> : <Icons.Expand size="30" color="#ff1493" />
   let RtProjects = () => ShowIcon(openProjects)
   let RtContact = () => ShowIcon(openContact)
 
@@ -36,7 +36,7 @@ export default function App() {
       <div className="animate">
         <Intro />
         <Styled.Title onClick={() => toggleOpen(openProjects, setOpenProjects, eProject)}>
-          <Icons.Dash size="30" />
+          <Icons.Dash size="20" />
           <Styled.LineBg ref={eProject}>projects</Styled.LineBg>
           <RtProjects />
         </Styled.Title>
@@ -44,15 +44,15 @@ export default function App() {
           <Projects />
         </Styled.ContentWrap>
         <Styled.Title onClick={() => toggleOpen(openContact, setOpenContact, eContact)}>
-          <Icons.Dash size="30" />
+          <Icons.Dash size="20" />
           <Styled.LineBg ref={eContact}>get in touch</Styled.LineBg>
           <RtContact />
         </Styled.Title>
         <Styled.ContentWrap show={openContact}>
           <Contact />
         </Styled.ContentWrap>
-        <Styled.Title>
-          <Icons.Dash size="30" />
+        <Styled.Title about>
+          <Icons.Dash size="20" />
           <Styled.LineBg>about</Styled.LineBg>
         </Styled.Title>
         <Styled.ContentWrap show="true">
