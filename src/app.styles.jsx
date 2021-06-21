@@ -1,15 +1,15 @@
-import styled from "styled-components";
-import { Icons } from "./components/utilities";
+import styled from "styled-components"
+import { Icons } from "./components/utilities"
 
 export const Rotate = styled(Icons.Expand)`
   width: 30px;
   color: #607d8b;
   transform: rotate(180deg);
-`;
+`
 
 export const ContentWrap = styled.div`
   display: ${(props) => (props.show ? "block" : "none")};
-`;
+`
 
 export const LineBg = styled.span`
   display: inline-block;
@@ -26,15 +26,18 @@ export const LineBg = styled.span`
     margin-top: -0.6em;
     border-radius: 1px;
   }
-`;
+`
 
 export const Title = styled.h2`
   margin: 1em 0 1em 1em;
-  font-size: 1.8em;
+  font-size: 1.4em;
   width: fit-content;
-  color: #005d8a;
+  color: #1f2762;
   font-family: "Roboto Mono", monospace;
+  transition: all 0.3s ease;
+
   &:hover {
-    cursor: pointer;
+    cursor: ${(props) => (props.about ? "default" : "pointer")};
+    color: ${(props) => (props.about ? "#1f2762" : "#ff1493")};
   }
-`;
+`
