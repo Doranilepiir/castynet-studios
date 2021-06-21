@@ -3,7 +3,7 @@ import { Behance } from "@styled-icons/boxicons-logos/Behance";
 import { Twitter } from "@styled-icons/boxicons-logos/Twitter";
 import { PinterestAlt } from "@styled-icons/boxicons-logos/PinterestAlt";
 import { Instagram } from "@styled-icons/boxicons-logos/Instagram";
-import { Link } from "@styled-icons/evil/Link";
+import { ExternalLink } from "@styled-icons/evaicons-solid/ExternalLink";
 import { ExpandMore } from "@styled-icons/material-rounded/ExpandMore";
 import { ExpandLess } from "@styled-icons/material-rounded/ExpandLess";
 import { HorizontalRule } from "@styled-icons/material-outlined/HorizontalRule";
@@ -51,7 +51,7 @@ export const Icons = {
   Twitter: Twitter,
   Pinterest: PinterestAlt,
   Instagram: Instagram,
-  Link: Link,
+  Link: ExternalLink,
   Expand: ExpandMore,
   Dash: HorizontalRule,
   Check: BadgeCheck,
