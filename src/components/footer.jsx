@@ -64,8 +64,8 @@ const Wrapper = styled.footer`
   margin-top: 40px;
 
   p {
+    font-family: "Roboto Mono", monospace;
     color: #fff;
-    font-weight: 600;
     text-align: center;
     text-transform: lowercase;
     width: 100%;
@@ -81,14 +81,14 @@ const IconsWrap = styled.div`
   gap: 15px;
   max-width: 200px;
   margin: 15px auto 0 auto;
-  border-top: 1px solid #ff5722;
+  border-top: 1px solid #ff1493;
   padding: 5px 20px 0 20px;
 
   a {
-    color: #ffeb3b;
+    color: #fff;
 
     &:hover {
-      color: #ff5722;
+      color: #FF69B4;
     }
   }
 `;
