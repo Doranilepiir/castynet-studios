@@ -17,7 +17,7 @@ export default function About() {
           <span className="marked">Web.</span> We are powered by coffee, unreal imagination and attention
           to detail. <br />
           If you have a project you think would be a fit for us do{" "}
-          <a href="mailto:talk-to@castynet.africa">
+          <a href="mailto:talk-to@castynet.africa" title="Email Castynet">
             <span
               className="marked"
               style={{
@@ -31,7 +31,11 @@ export default function About() {
         </AboutDescription>
         <Rating>
           <ListTitle>appraised at</ListTitle>
-          <a href={Links.GoogleListing} target={blank} rel={external} aria-label="Rating on Google">
+          <a
+            href={Links.GoogleListing}
+            target={blank}
+            rel={external}
+            title="See Castynet's Rating on Google">
             <li>
               5/5 Star on Google <Icons.Link size="17" />
             </li>
@@ -39,17 +43,17 @@ export default function About() {
         </Rating>
         <Stats>
           <ListTitle>the numbers</ListTitle>
-          <a href={Links.Github} target={blank} rel={external} aria-label="Github">
+          <a href={Links.Github} target={blank} rel={external} title="Visit Castynet's Github">
             <li>
               931,019 lines of code <Icons.Github size="20" />
             </li>
           </a>
-          <a href={Links.Instagram} target={blank} rel={external} aria-label="Instagram">
+          <a href={Links.Instagram} target={blank} rel={external} title="Visit Castynet's Instagram">
             <li>
               1.6k Peers <Icons.Instagram size="20" />
             </li>
           </a>
-          <a href={Links.Twitter} target={blank} rel={external} aria-label="Twitter">
+          <a href={Links.Twitter} target={blank} rel={external} title="Visit Castynet's Twitter">
             <li>
               285 Tweets <Icons.Twitter size="20" />
             </li>

@@ -12,44 +12,19 @@ export default function Footer() {
       <Wrapper>
         <p>&#169; 2018 - {Year()} Castynet Studios - Empowering Software</p>
         <IconsWrap>
-          <a
-            href={Links.Github}
-            target={blank}
-            rel={external}
-            aria-label="Github"
-          >
+          <a href={Links.Github} target={blank} rel={external} title="Visit Castynet's Github">
             <Icons.Github size="25" />
           </a>
-          <a
-            href={Links.Behance}
-            target={blank}
-            rel={external}
-            aria-label="Behance"
-          >
+          <a href={Links.Behance} target={blank} rel={external} title="Visit Castynet's Behance">
             <Icons.Behance size="25" />
           </a>
-          <a
-            href={Links.Twitter}
-            target={blank}
-            rel={external}
-            aria-label="Twitter"
-          >
+          <a href={Links.Twitter} target={blank} rel={external} title="Visit Castynet's Twitter">
             <Icons.Twitter size="25" />
           </a>
-          <a
-            href={Links.Pinterest}
-            target={blank}
-            rel={external}
-            aria-label="Pinterest"
-          >
+          <a href={Links.Pinterest} target={blank} rel={external} title="Visit Castynet's Pinterest">
             <Icons.Pinterest size="25" />
           </a>
-          <a
-            href={Links.Instagram}
-            target={blank}
-            rel={external}
-            aria-label="Instagram"
-          >
+          <a href={Links.Instagram} target={blank} rel={external} title="Visit Castynet's Instagram">
             <Icons.Instagram size="25" />
           </a>
         </IconsWrap>
@@ -88,7 +63,7 @@ const IconsWrap = styled.div`
     color: #fff;
 
     &:hover {
-      color: #FF69B4;
+      color: #ff69b4;
     }
   }
 `;

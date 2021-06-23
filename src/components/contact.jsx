@@ -6,7 +6,7 @@ export default function Contact() {
     <>
       <ContactWrap>
         We are booked out for the <span className="marked">next few weeks</span> but you can reach us via{" "}
-        <a href="mailto:talk-to@castynet.africa">
+        <a href="mailto:talk-to@castynet.africa" title="Email Castynet">
           <span
             className="marked"
             style={{
