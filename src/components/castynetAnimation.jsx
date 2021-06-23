@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 
 export default function () {
   return (
@@ -97,7 +97,7 @@ export default function () {
         </g>
       </SvgWrap>
     </>
-  )
+  );
 }
 
 const SvgWrap = styled.svg`
@@ -151,4 +151,4 @@ const SvgWrap = styled.svg`
       fill: rgb(31, 39, 98);
     }
   }
-`
+`;

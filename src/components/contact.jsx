@@ -5,10 +5,17 @@ export default function Contact() {
   return (
     <>
       <ContactWrap>
-        We are booked out for the <span className="marked">next few weeks</span>{" "}
-        but you can reach us via
+        We are booked out for the <span className="marked">next few weeks</span> but you can reach us via{" "}
         <a href="mailto:talk-to@castynet.africa">
-          <span className="marked"> talk-to@castynet.africa</span>
+          <span
+            className="marked"
+            style={{
+              background: "rgb(255 20 147 / 20%)",
+              border: "1px solid rgb(255 20 147 / 30%)",
+              color: "rgb(13 42 255)",
+            }}>
+            talk-to@castynet.africa
+          </span>
         </a>{" "}
         to schedule your project once our schedule opens up.
       </ContactWrap>
