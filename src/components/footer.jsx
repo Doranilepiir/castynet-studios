@@ -8,7 +8,7 @@ export default function Footer() {
   const blank = "_blank";
 
   return (
-    <>
+    <React.Fragment>
       <Wrapper>
         <p>&#169; 2018 - {Year()} Castynet Studios - Empowering Software</p>
         <IconsWrap>
@@ -29,7 +29,7 @@ export default function Footer() {
           </a>
         </IconsWrap>
       </Wrapper>
-    </>
+    </React.Fragment>
   );
 }
 

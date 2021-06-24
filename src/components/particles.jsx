@@ -4,12 +4,12 @@ import styled, { keyframes } from "styled-components";
 
 export default function Particles() {
   return (
-    <>
+    <React.Fragment>
       <Wrapper>
         <Connect />
         <Gear />
       </Wrapper>
-    </>
+    </React.Fragment>
   );
 }
 

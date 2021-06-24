@@ -1,11 +1,11 @@
-import React, { Component } from "react"
-import styled from "styled-components"
-import CastynetAnimated from "./castynetAnimation"
+import React, { Component } from "react";
+import styled from "styled-components";
+import CastynetAnimated from "./castynetAnimation";
 
 export default class Intro extends Component {
   render() {
     return (
-      <>
+      <React.Fragment>
         <Wrapper>
           <Title>
             <CastynetAnimated />
@@ -16,8 +16,8 @@ export default class Intro extends Component {
             <span className="marked">web.</span>
           </Text>
         </Wrapper>
-      </>
-    )
+      </React.Fragment>
+    );
   }
 }
 const Text = styled.p`
@@ -27,7 +27,7 @@ const Text = styled.p`
   font-size: 1.1em;
   text-align: center;
   color: #1f2762;
-`
+`;
 
 const Wrapper = styled.div`
   margin: 100px auto 50px auto;
@@ -35,12 +35,12 @@ const Wrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-`
+`;
 
 const Title = styled.h1`
   padding: 0 10px 10px;
   max-width: 100%;
-`
+`;
 
 const Description = styled.h2`
   font-size: 2.5em;
@@ -49,4 +49,4 @@ const Description = styled.h2`
   font-weight: 400;
   font-family: "Teko", sans-serif;
   padding-bottom: 10px;
-`
+`;

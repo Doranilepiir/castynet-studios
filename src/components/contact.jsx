@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export default function Contact() {
   return (
-    <>
+    <React.Fragment>
       <ContactWrap>
         We are booked out for the <span className="marked">next few weeks</span> but you can reach us via{" "}
         <a href="mailto:talk-to@castynet.africa" title="Email Castynet">
@@ -19,7 +19,7 @@ export default function Contact() {
         </a>{" "}
         to schedule your project once our schedule opens up.
       </ContactWrap>
-    </>
+    </React.Fragment>
   );
 }
 

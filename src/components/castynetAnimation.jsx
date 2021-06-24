@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export default function AnimatedLogo() {
   return (
-    <>
+    <React.Fragment>
       <SvgWrap
         width="420"
         height="59"
@@ -96,7 +96,7 @@ export default function AnimatedLogo() {
           </g>
         </g>
       </SvgWrap>
-    </>
+    </React.Fragment>
   );
 }
 

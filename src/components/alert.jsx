@@ -5,38 +5,38 @@ import { AlertTriangle } from "@styled-icons/feather/AlertTriangle";
 
 export function Sending() {
   return (
-    <>
+    <React.Fragment>
       <CreatingWrap>
         <p>Just a sec, Sending the Message...</p>
       </CreatingWrap>
-    </>
+    </React.Fragment>
   );
 }
 
 export function Sent() {
   return (
-    <>
+    <React.Fragment>
       <CreatedWrap>
         <p>Great! Message Received, we'll be in-touch Soon</p>
       </CreatedWrap>
-    </>
+    </React.Fragment>
   );
 }
 
 export function Error() {
   return (
-    <>
+    <React.Fragment>
       <ErrorWrap>
         Sorry, something went wrong, but you can email us directly at{"  "}
         <mark>talk-to@castynet.africa</mark>
       </ErrorWrap>
-    </>
+    </React.Fragment>
   );
 }
 
 export function LoadingTimetable() {
   return (
-    <>
+    <React.Fragment>
       <Wrapper>
         <LoadingTimetableWrap>
           <Rotate>
@@ -45,20 +45,20 @@ export function LoadingTimetable() {
           <p>Hold on a sec, we're Loading the Timetable</p>
         </LoadingTimetableWrap>
       </Wrapper>
-    </>
+    </React.Fragment>
   );
 }
 
 export function TimetableEmpty() {
   return (
-    <>
+    <React.Fragment>
       <Wrapper>
         <TimetableEmptyWrap>
           <AlertTriangle size="40" />
           <p>You have no Lessons click 'Create New Lesson' to add Lessons</p>
         </TimetableEmptyWrap>
       </Wrapper>
-    </>
+    </React.Fragment>
   );
 }
 

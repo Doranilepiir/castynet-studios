@@ -7,7 +7,7 @@ export default function About() {
   const blank = "_blank";
 
   return (
-    <>
+    <React.Fragment>
       <Wrapper>
         <AboutDescription>
           Castynet is a small team of <span className="marked">Software Developers</span> based in{" "}
@@ -78,7 +78,7 @@ export default function About() {
           <li>React Native</li>
         </Technologies>
       </Wrapper>
-    </>
+    </React.Fragment>
   );
 }
 

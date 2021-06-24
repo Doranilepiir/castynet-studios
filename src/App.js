@@ -1,38 +1,38 @@
-import React, { useState, useRef } from "react"
+import React, { useState, useRef } from "react";
 
-import * as Styled from "./app.styles.jsx"
-import { Icons } from "./components/utilities"
+import * as Styled from "./app.styles.jsx";
+import { Icons } from "./components/utilities";
 
-import Intro from "./components/intro"
-import Projects from "./components/projects"
-import About from "./components/about"
-import Footer from "./components/footer"
-import Contact from "./components/contact"
+import Intro from "./components/intro";
+import Projects from "./components/projects";
+import About from "./components/about";
+import Footer from "./components/footer";
+import Contact from "./components/contact";
 
 export default function App() {
-  const [openProjects, setOpenProjects] = useState(false)
-  const [openContact, setOpenContact] = useState(false)
+  const [openProjects, setOpenProjects] = useState(false);
+  const [openContact, setOpenContact] = useState(false);
 
   let eProject = useRef(null),
-    eContact = useRef(null)
+    eContact = useRef(null);
 
   let toggleOpen = (state, setState, element) => {
     if (state === true) {
-      element.current.scrollIntoView(false)
-      setState(false)
+      element.current.scrollIntoView(false);
+      setState(false);
     } else {
-      element.current.scrollIntoView(true)
-      setState(true)
+      element.current.scrollIntoView(true);
+      setState(true);
     }
-  }
+  };
 
   let ShowIcon = (open) =>
-    open === true ? <Styled.Rotate /> : <Icons.Expand size="30" color="#ff1493" />
-  let RtProjects = () => ShowIcon(openProjects)
-  let RtContact = () => ShowIcon(openContact)
+    open === true ? <Styled.Rotate /> : <Icons.Expand size="30" color="#ff1493" />;
+  let RtProjects = () => ShowIcon(openProjects);
+  let RtContact = () => ShowIcon(openContact);
 
   return (
-    <>
+    <React.Fragment>
       <div className="animate">
         <Intro />
         <Styled.Title onClick={() => toggleOpen(openProjects, setOpenProjects, eProject)}>
@@ -60,6 +60,6 @@ export default function App() {
         </Styled.ContentWrap>
         <Footer />
       </div>
-    </>
-  )
+    </React.Fragment>
+  );
 }
