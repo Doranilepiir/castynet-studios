@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import * as Styled from "./app.styles.jsx";
 import { Icons } from "./components/utilities";
 
@@ -8,6 +9,7 @@ import Projects from "./components/projects";
 import About from "./components/about";
 import Footer from "./components/footer";
 import Contact from "./components/contact";
+import NotFound from "./components/notFound";
 
 export default function App() {
   const [openProjects, setOpenProjects] = useState(false);
@@ -31,35 +33,48 @@ export default function App() {
   let RtProjects = () => ShowIcon(openProjects);
   let RtContact = () => ShowIcon(openContact);
 
+  const HomePage = () => {
+    return (
+      <React.Fragment>
+        <div>
+          <Intro />
+          <Styled.Title onClick={() => toggleOpen(openProjects, setOpenProjects, eProject)}>
+            <Icons.Dash size="20" />
+            <Styled.LineBg ref={eProject}>projects</Styled.LineBg>
+            <RtProjects />
+          </Styled.Title>
+          <Styled.ContentWrap show={openProjects}>
+            <Projects />
+          </Styled.ContentWrap>
+          <Styled.Title onClick={() => toggleOpen(openContact, setOpenContact, eContact)}>
+            <Icons.Dash size="20" />
+            <Styled.LineBg ref={eContact}>get in touch</Styled.LineBg>
+            <RtContact />
+          </Styled.Title>
+          <Styled.ContentWrap show={openContact}>
+            <Contact />
+          </Styled.ContentWrap>
+          <Styled.Title about>
+            <Icons.Dash size="20" />
+            <Styled.LineBg>about</Styled.LineBg>
+          </Styled.Title>
+          <Styled.ContentWrap show="true">
+            <About />
+          </Styled.ContentWrap>
+          <Footer />
+        </div>
+      </React.Fragment>
+    );
+  };
+
   return (
     <React.Fragment>
-      <div className="animate">
-        <Intro />
-        <Styled.Title onClick={() => toggleOpen(openProjects, setOpenProjects, eProject)}>
-          <Icons.Dash size="20" />
-          <Styled.LineBg ref={eProject}>projects</Styled.LineBg>
-          <RtProjects />
-        </Styled.Title>
-        <Styled.ContentWrap show={openProjects}>
-          <Projects />
-        </Styled.ContentWrap>
-        <Styled.Title onClick={() => toggleOpen(openContact, setOpenContact, eContact)}>
-          <Icons.Dash size="20" />
-          <Styled.LineBg ref={eContact}>get in touch</Styled.LineBg>
-          <RtContact />
-        </Styled.Title>
-        <Styled.ContentWrap show={openContact}>
-          <Contact />
-        </Styled.ContentWrap>
-        <Styled.Title about>
-          <Icons.Dash size="20" />
-          <Styled.LineBg>about</Styled.LineBg>
-        </Styled.Title>
-        <Styled.ContentWrap show="true">
-          <About />
-        </Styled.ContentWrap>
-        <Footer />
-      </div>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route component={NotFound} />
+        </Switch>
+      </Router>
     </React.Fragment>
   );
 }
