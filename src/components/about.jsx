@@ -36,46 +36,46 @@ export default function About() {
             target={blank}
             rel={external}
             title="See Castynet's Rating on Google">
-            <li>
+            <dd>
               5/5 Star on Google <Icons.Link size="17" />
-            </li>
+            </dd>
           </a>
         </Rating>
         <Stats>
           <ListTitle>the numbers</ListTitle>
           <a href={Links.Github} target={blank} rel={external} title="Visit Castynet's Github">
-            <li>
+            <dd>
               931,019 lines of code <Icons.Github size="20" />
-            </li>
+            </dd>
           </a>
           <a href={Links.Instagram} target={blank} rel={external} title="Visit Castynet's Instagram">
-            <li>
+            <dd>
               1.6k Peers <Icons.Instagram size="20" />
-            </li>
+            </dd>
           </a>
           <a href={Links.Twitter} target={blank} rel={external} title="Visit Castynet's Twitter">
-            <li>
+            <dd>
               285 Tweets <Icons.Twitter size="20" />
-            </li>
+            </dd>
           </a>
         </Stats>
         <Services>
           <ListTitle>masters of</ListTitle>
-          <li>Web Development</li>
-          <li>Web Design</li>
-          <li>Wordpress</li>
-          <li>UI/UX Design</li>
-          <li>Graphic Design</li>
+          <dd>Web Development</dd>
+          <dd>Web Design</dd>
+          <dd>Wordpress</dd>
+          <dd>UI/UX Design</dd>
+          <dd>Graphic Design</dd>
         </Services>
         <Technologies>
           <ListTitle>dev kit</ListTitle>
-          <li>JavaScript</li>
-          <li>ReactJS</li>
-          <li>NodeJS</li>
-          <li>Headless CMS/s</li>
-          <li>Illustrator</li>
-          <li>PhotoShop</li>
-          <li>React Native</li>
+          <dd>JavaScript</dd>
+          <dd>ReactJS</dd>
+          <dd>NodeJS</dd>
+          <dd>Headless CMS/s</dd>
+          <dd>Illustrator</dd>
+          <dd>PhotoShop</dd>
+          <dd>React Native</dd>
         </Technologies>
       </Wrapper>
     </React.Fragment>
@@ -95,9 +95,9 @@ const AboutDescription = styled.main`
   text-align: center;
 `;
 
-const Rating = styled.ul`
+const Rating = styled.dl`
   padding: 20px 0 10px 20px;
-  li {
+  dd {
     display: inline-block;
     padding: 1px 10px;
     margin: 5px;
@@ -107,12 +107,13 @@ const Rating = styled.ul`
     font-weight: 300;
     transition: all 0.2s ease;
   }
-  a li:hover {
+  a dd:hover {
     background-color: #ff1493;
   }
 `;
 
-const ListTitle = styled.li`
+const ListTitle = styled.dt`
+  display: inline-block;
   background-color: #fff !important;
   width: 120px;
   text-align: center;
@@ -123,9 +124,9 @@ const ListTitle = styled.li`
   letter-spacing: 0 !important;
 `;
 
-const Services = styled.ul`
+const Services = styled.dl`
   padding: 10px 0 10px 20px;
-  li {
+  dd {
     display: inline-block;
     padding: 1px 10px;
     margin: 5px;
@@ -134,14 +135,14 @@ const Services = styled.ul`
     color: #fff;
     font-weight: 300;
   }
-  li:hover {
+  dd:hover {
     cursor: default;
   }
 `;
 
-const Technologies = styled.ul`
+const Technologies = styled.dl`
   padding: 10px 0 10px 20px;
-  li {
+  dd {
     display: inline-block;
     padding: 1px 10px;
     margin: 5px;
@@ -150,14 +151,14 @@ const Technologies = styled.ul`
     color: #fff;
     font-weight: 300;
   }
-  li:hover {
+  dd:hover {
     cursor: default;
   }
 `;
 
-const Stats = styled.ul`
+const Stats = styled.dl`
   padding: 10px 0 10px 20px;
-  li {
+  dd {
     display: inline-block;
     padding: 1px 10px;
     margin: 5px;
@@ -167,7 +168,7 @@ const Stats = styled.ul`
     font-weight: 300;
     transition: all 0.2s ease;
   }
-  a li:hover {
+  a dd:hover {
     background-color: #ff1493;
   }
 `;
