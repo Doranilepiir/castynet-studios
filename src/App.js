@@ -36,33 +36,39 @@ export default function App() {
   const HomePage = () => {
     return (
       <React.Fragment>
-        <div>
+        <main>
           <Intro />
-          <Styled.Title onClick={() => toggleOpen(openProjects, setOpenProjects, eProject)}>
-            <Icons.Dash size="20" />
-            <Styled.LineBg ref={eProject}>projects</Styled.LineBg>
-            <RtProjects />
-          </Styled.Title>
-          <Styled.ContentWrap show={openProjects}>
-            <Projects />
-          </Styled.ContentWrap>
-          <Styled.Title onClick={() => toggleOpen(openContact, setOpenContact, eContact)}>
-            <Icons.Dash size="20" />
-            <Styled.LineBg ref={eContact}>get in touch</Styled.LineBg>
-            <RtContact />
-          </Styled.Title>
-          <Styled.ContentWrap show={openContact}>
-            <Contact />
-          </Styled.ContentWrap>
-          <Styled.Title about>
-            <Icons.Dash size="20" />
-            <Styled.LineBg>about</Styled.LineBg>
-          </Styled.Title>
-          <Styled.ContentWrap show="true">
-            <About />
-          </Styled.ContentWrap>
-          <Footer />
-        </div>
+          <section aria-label="Projects">
+            <Styled.Title onClick={() => toggleOpen(openProjects, setOpenProjects, eProject)}>
+              <Icons.Dash size="20" />
+              <Styled.LineBg ref={eProject}>projects</Styled.LineBg>
+              <RtProjects />
+            </Styled.Title>
+            <Styled.ContentWrap aria-hidden={!openProjects} show={openProjects}>
+              <Projects />
+            </Styled.ContentWrap>
+          </section>
+          <section aria-label="Contact">
+            <Styled.Title onClick={() => toggleOpen(openContact, setOpenContact, eContact)}>
+              <Icons.Dash size="20" />
+              <Styled.LineBg ref={eContact}>get in touch</Styled.LineBg>
+              <RtContact />
+            </Styled.Title>
+            <Styled.ContentWrap aria-hidden={!openContact} show={openContact}>
+              <Contact />
+            </Styled.ContentWrap>
+          </section>
+          <section aria-label="About">
+            <Styled.Title about>
+              <Icons.Dash size="20" />
+              <Styled.LineBg>about</Styled.LineBg>
+            </Styled.Title>
+            <Styled.ContentWrap aria-label="about" show="true">
+              <About />
+            </Styled.ContentWrap>
+          </section>
+        </main>
+        <Footer />
       </React.Fragment>
     );
   };
