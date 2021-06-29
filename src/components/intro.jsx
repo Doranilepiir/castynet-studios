@@ -6,8 +6,8 @@ export default class Intro extends Component {
   render() {
     return (
       <React.Fragment>
-        <Wrapper>
-          <Title>
+        <Wrapper aria-label="Introduction">
+          <Title aria-label="Castynet Logo" title="Castynet Logo">
             <CastynetAnimated />
           </Title>
           <Description>Empowering Software</Description>
@@ -29,7 +29,7 @@ const Text = styled.p`
   color: #1f2762;
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
   margin: 100px auto 50px auto;
   display: flex;
   justify-content: center;
@@ -37,7 +37,7 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 
-const Title = styled.h1`
+const Title = styled.div`
   padding: 0 10px 10px;
   max-width: 100%;
 `;
