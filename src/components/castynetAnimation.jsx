@@ -114,7 +114,7 @@ const SvgWrap = styled.svg`
     stroke-width: 8px;
     stroke: rgb(31, 39, 98);
     animation: 3s draw linear forwards;
-    animation-delay: 1.5s;
+    animation-delay: 0.5s;
   }
 
   #studios {
@@ -124,7 +124,7 @@ const SvgWrap = styled.svg`
     stroke-width: 8px;
     stroke: rgb(31, 39, 98);
     animation: 3.5s draw linear forwards;
-    animation-delay: 2s;
+    animation-delay: 1s;
   }
 
   @keyframes draw {
