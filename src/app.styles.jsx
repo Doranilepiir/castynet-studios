@@ -37,7 +37,7 @@ export const Title = styled.h2`
   transition: all 0.3s ease;
 
   &:hover {
-    cursor: ${(props) => (props.about ? "default" : "pointer")};
-    color: ${(props) => (props.about ? "#1f2762" : "#ff1493")};
+    cursor: ${(props) => (props.abt ? "default" : "pointer")};
+    color: ${(props) => (props.abt ? "#1f2762" : "#ff1493")};
   }
 `;
