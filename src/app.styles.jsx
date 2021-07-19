@@ -7,9 +7,6 @@ export const Rotate = styled(Icons.Expand)`
   transform: rotate(180deg);
 `;
 
-export const ContentWrap = styled.div`
-  display: ${(props) => (props.show ? "block" : "none")};
-`;
 
 export const LineBg = styled.span`
   display: inline-block;
