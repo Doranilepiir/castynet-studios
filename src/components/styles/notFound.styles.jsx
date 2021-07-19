@@ -1,12 +1,10 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
+  min-height: 10px;
   text-align: center;
   margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   line-height: 25px;
   font-size: 1.5em;
   font-family: "Teko", sans-serif;
