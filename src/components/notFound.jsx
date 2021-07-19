@@ -14,6 +14,8 @@ export default function NotFound() {
           className="marked"
           style={{
             fontFamily: '"Roboto Mono", monospace',
+            background: "rgb(255 0 0 / 20%)",
+            color: 'red'
           }}>
           <u>Error 404</u>
         </p>
@@ -25,7 +27,7 @@ export default function NotFound() {
             <span
               className="marked"
               style={{
-                background: "rgb(255 20 147 / 20%)",
+                background: "#8acfff",
                 border: "1px solid rgb(255 20 147 / 30%)",
                 color: "rgb(13 42 255)",
               }}>
