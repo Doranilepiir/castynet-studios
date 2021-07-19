@@ -1,6 +1,6 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter, HashRouter as Router, Route, Switch } from "react-router-dom";
 import * as Styled from "./app.styles.jsx";
 import { Icons } from "./components/utilities";
 
@@ -12,75 +12,99 @@ import Contact from "./components/contact";
 import NotFound from "./components/notFound";
 
 export default function App() {
-  const [openProjects, setOpenProjects] = useState(false);
-  const [openContact, setOpenContact] = useState(false);
+  // element.current.scrollIntoView(true);
+  // <Styled.Rotate /> : <Icons.Expand size="30" color="#ff1493" />
 
   let eProject = useRef(null),
     eContact = useRef(null);
 
-  let toggleOpen = (state, setState, element) => {
-    if (state === true) {
-      element.current.scrollIntoView(false);
-      setState(false);
-    } else {
-      element.current.scrollIntoView(true);
-      setState(true);
-    }
-  };
-
-  let ShowIcon = (open) =>
-    open === true ? <Styled.Rotate /> : <Icons.Expand size="30" color="#ff1493" />;
-  let RtProjects = () => ShowIcon(openProjects);
-  let RtContact = () => ShowIcon(openContact);
-
   const HomePage = () => {
+    console.log("home");
     return (
       <React.Fragment>
         <main>
-          <Intro />
           <section aria-label="Projects">
-            <Styled.Title onClick={() => toggleOpen(openProjects, setOpenProjects, eProject)}>
+            <Styled.Title>
               <Icons.Dash size="20" />
               <Styled.LineBg ref={eProject}>projects</Styled.LineBg>
-              <RtProjects />
             </Styled.Title>
-            <Styled.ContentWrap aria-hidden={!openProjects} show={openProjects}>
-              <Projects />
-            </Styled.ContentWrap>
           </section>
           <section aria-label="Contact">
-            <Styled.Title onClick={() => toggleOpen(openContact, setOpenContact, eContact)}>
+            <Styled.Title>
               <Icons.Dash size="20" />
               <Styled.LineBg ref={eContact}>get in touch</Styled.LineBg>
-              <RtContact />
             </Styled.Title>
-            <Styled.ContentWrap aria-hidden={!openContact} show={openContact}>
-              <Contact />
-            </Styled.ContentWrap>
           </section>
           <section aria-label="About">
-            <Styled.Title about>
+            <Styled.Title abt>
               <Icons.Dash size="20" />
               <Styled.LineBg>about</Styled.LineBg>
             </Styled.Title>
-            <Styled.ContentWrap aria-label="about" show="true">
-              <About />
-            </Styled.ContentWrap>
+            <About />
           </section>
         </main>
-        <Footer />
+      </React.Fragment>
+    );
+  };
+
+  const ProjectsRoute = () => {
+    console.log("proj");
+    return (
+      <React.Fragment>
+        <main>
+          <section aria-label="Projects">
+            <Styled.Title>
+              <Icons.Dash size="20" />
+              <Styled.LineBg ref={eProject}>projects</Styled.LineBg>
+            </Styled.Title>
+            <Projects />
+          </section>
+          <section aria-label="Contact">
+            <Styled.Title>
+              <Icons.Dash size="20" />
+              <Styled.LineBg ref={eContact}>get in touch</Styled.LineBg>
+            </Styled.Title>
+          </section>
+        </main>
+      </React.Fragment>
+    );
+  };
+
+  const ContactRoute = () => {
+    console.log("cont");
+    return (
+      <React.Fragment>
+        <main>
+          <section aria-label="Projects">
+            <Styled.Title>
+              <Icons.Dash size="20" />
+              <Styled.LineBg ref={eProject}>projects</Styled.LineBg>
+            </Styled.Title>
+          </section>
+          <section aria-label="Contact">
+            <Styled.Title>
+              <Icons.Dash size="20" />
+              <Styled.LineBg ref={eContact}>get in touch</Styled.LineBg>
+            </Styled.Title>
+            <Contact />
+          </section>
+        </main>
       </React.Fragment>
     );
   };
 
   return (
     <React.Fragment>
-      <Router>
+      <HashRouter>
+        <Intro />
         <Switch>
-          <Route exact path="/" component={HomePage} />
+          <Route exact path="/" render={(props) => <HomePage {...props} />} />
+          <Route path="/contact" render={(props) => <ContactRoute {...props} />} />
+          <Route path="/projects" render={(props) => <ProjectsRoute {...props} />} />
           <Route component={NotFound} />
         </Switch>
-      </Router>
+        <Footer />
+      </HashRouter>
     </React.Fragment>
   );
 }
