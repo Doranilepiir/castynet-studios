@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-import { HashRouter, HashRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import * as Styled from "./app.styles.jsx";
 import { Icons } from "./components/utilities";
 
@@ -65,6 +65,12 @@ export default function App() {
               <Styled.LineBg ref={eContact}>get in touch</Styled.LineBg>
             </Styled.Title>
           </section>
+          <section aria-label="About">
+            <Styled.Title abt>
+              <Icons.Dash size="20" />
+              <Styled.LineBg>about</Styled.LineBg>
+            </Styled.Title>
+          </section>
         </main>
       </React.Fragment>
     );
@@ -88,6 +94,12 @@ export default function App() {
             </Styled.Title>
             <Contact />
           </section>
+          <section aria-label="About">
+            <Styled.Title>
+              <Icons.Dash size="20" />
+              <Styled.LineBg>about</Styled.LineBg>
+            </Styled.Title>
+          </section>
         </main>
       </React.Fragment>
     );
@@ -95,16 +107,16 @@ export default function App() {
 
   return (
     <React.Fragment>
-      <HashRouter>
+      <Router>
         <Intro />
         <Switch>
-          <Route exact path="/" render={(props) => <HomePage {...props} />} />
-          <Route path="/contact" render={(props) => <ContactRoute {...props} />} />
-          <Route path="/projects" render={(props) => <ProjectsRoute {...props} />} />
+          <Route path="/contact" component={ContactRoute} />
+          <Route path="/projects" component={ProjectsRoute} />
+          <Route path="/" component={HomePage} />
           <Route component={NotFound} />
         </Switch>
         <Footer />
-      </HashRouter>
+      </Router>
     </React.Fragment>
   );
 }
