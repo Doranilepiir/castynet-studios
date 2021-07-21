@@ -7,7 +7,6 @@ export const Rotate = styled(Icons.Expand)`
   transform: rotate(180deg);
 `;
 
-
 export const LineBg = styled.span`
   display: inline-block;
   padding-right: 5px;
@@ -34,7 +33,7 @@ export const Title = styled.h2`
   transition: all 0.3s ease;
 
   &:hover {
-    cursor: ${(props) => (props.abt ? "default" : "pointer")};
-    color: ${(props) => (props.abt ? "#1f2762" : "#ff1493")};
+    cursor: pointer;
+    color: #ff1493;
   }
 `;
