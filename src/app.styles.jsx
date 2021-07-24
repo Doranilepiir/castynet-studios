@@ -1,11 +1,4 @@
 import styled from "styled-components";
-import { Icons } from "./components/utilities";
-
-export const Rotate = styled(Icons.Expand)`
-  width: 30px;
-  color: #607d8b;
-  transform: rotate(180deg);
-`;
 
 export const LineBg = styled.span`
   display: inline-block;
