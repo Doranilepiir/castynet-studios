@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import * as Styled from "./app.styles.jsx";
@@ -12,14 +12,15 @@ import Contact from "./components/contact";
 import NotFound from "./components/notFound";
 
 export default function App() {
-  // element.current.scrollIntoView(true);
-  // <Styled.Rotate /> : <Icons.Expand size="30" color="#ff1493" />
-
   let eProject = useRef(null),
-    eContact = useRef(null);
+    eContact = useRef(null),
+    eAbout = useRef(null);
 
   const HomePage = () => {
-    console.log("home");
+    const scIntoView = (e) => {
+      eAbout.current.scrollIntoView(true);
+    };
+
     return (
       <React.Fragment>
         <main>
@@ -27,7 +28,8 @@ export default function App() {
             <Link to="/projects">
               <Styled.Title>
                 <Icons.Dash size="20" />
-                <Styled.LineBg ref={eProject}>projects</Styled.LineBg>
+                <Styled.LineBg>projects</Styled.LineBg>
+                <Icons.Expand size="30" color="#ff1493" />
               </Styled.Title>
             </Link>
           </section>
@@ -35,14 +37,15 @@ export default function App() {
             <Link to="/contact">
               <Styled.Title>
                 <Icons.Dash size="20" />
-                <Styled.LineBg ref={eContact}>get in touch</Styled.LineBg>
+                <Styled.LineBg>get in touch</Styled.LineBg>
+                <Icons.Expand size="30" color="#ff1493" />
               </Styled.Title>
             </Link>
           </section>
           <section aria-label="About">
-            <Styled.Title abt>
+            <Styled.Title onClick={() => scIntoView(eAbout)}>
               <Icons.Dash size="20" />
-              <Styled.LineBg>about</Styled.LineBg>
+              <Styled.LineBg ref={eAbout}>about</Styled.LineBg>
             </Styled.Title>
             <About />
           </section>
@@ -52,7 +55,14 @@ export default function App() {
   };
 
   const ProjectsRoute = () => {
-    console.log("proj");
+    useEffect(() => {
+      eProject.current.scrollIntoView(true);
+    }, []);
+
+    const scIntoView = (e) => {
+      eAbout.current.scrollIntoView(true);
+    };
+
     return (
       <React.Fragment>
         <main>
@@ -67,15 +77,17 @@ export default function App() {
             <Link to="/contact">
               <Styled.Title>
                 <Icons.Dash size="20" />
-                <Styled.LineBg ref={eContact}>get in touch</Styled.LineBg>
+                <Styled.LineBg>get in touch</Styled.LineBg>
+                <Icons.Expand size="30" color="#ff1493" />
               </Styled.Title>
             </Link>
           </section>
           <section aria-label="About">
             <Link to="/">
-              <Styled.Title abt>
+              <Styled.Title onClick={() => scIntoView(eAbout)}>
                 <Icons.Dash size="20" />
-                <Styled.LineBg>about</Styled.LineBg>
+                <Styled.LineBg ref={eAbout}>about</Styled.LineBg>
+                <Icons.Expand size="30" color="#ff1493" />
               </Styled.Title>
             </Link>
           </section>
@@ -85,7 +97,14 @@ export default function App() {
   };
 
   const ContactRoute = () => {
-    console.log("cont");
+    useEffect(() => {
+      eContact.current.scrollIntoView(true);
+    }, []);
+
+    const scIntoView = (e) => {
+      eAbout.current.scrollIntoView(true);
+    };
+
     return (
       <React.Fragment>
         <main>
@@ -93,7 +112,8 @@ export default function App() {
             <Link to="/projects">
               <Styled.Title>
                 <Icons.Dash size="20" />
-                <Styled.LineBg ref={eProject}>projects</Styled.LineBg>
+                <Styled.LineBg>projects</Styled.LineBg>
+                <Icons.Expand size="30" color="#ff1493" />
               </Styled.Title>
             </Link>
           </section>
@@ -106,9 +126,10 @@ export default function App() {
           </section>
           <section aria-label="About">
             <Link to="/">
-              <Styled.Title>
+              <Styled.Title onClick={() => scIntoView(eAbout)}>
                 <Icons.Dash size="20" />
-                <Styled.LineBg>about</Styled.LineBg>
+                <Styled.LineBg ref={eAbout}>about</Styled.LineBg>
+                <Icons.Expand size="30" color="#ff1493" />
               </Styled.Title>
             </Link>
           </section>
