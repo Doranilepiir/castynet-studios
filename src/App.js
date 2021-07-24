@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import * as Styled from "./app.styles.jsx";
 import { Icons } from "./components/utilities";
 
@@ -24,16 +24,20 @@ export default function App() {
       <React.Fragment>
         <main>
           <section aria-label="Projects">
-            <Styled.Title>
-              <Icons.Dash size="20" />
-              <Styled.LineBg ref={eProject}>projects</Styled.LineBg>
-            </Styled.Title>
+            <Link to="/projects">
+              <Styled.Title>
+                <Icons.Dash size="20" />
+                <Styled.LineBg ref={eProject}>projects</Styled.LineBg>
+              </Styled.Title>
+            </Link>
           </section>
           <section aria-label="Contact">
-            <Styled.Title>
-              <Icons.Dash size="20" />
-              <Styled.LineBg ref={eContact}>get in touch</Styled.LineBg>
-            </Styled.Title>
+            <Link to="/contact">
+              <Styled.Title>
+                <Icons.Dash size="20" />
+                <Styled.LineBg ref={eContact}>get in touch</Styled.LineBg>
+              </Styled.Title>
+            </Link>
           </section>
           <section aria-label="About">
             <Styled.Title abt>
@@ -60,16 +64,20 @@ export default function App() {
             <Projects />
           </section>
           <section aria-label="Contact">
-            <Styled.Title>
-              <Icons.Dash size="20" />
-              <Styled.LineBg ref={eContact}>get in touch</Styled.LineBg>
-            </Styled.Title>
+            <Link to="/contact">
+              <Styled.Title>
+                <Icons.Dash size="20" />
+                <Styled.LineBg ref={eContact}>get in touch</Styled.LineBg>
+              </Styled.Title>
+            </Link>
           </section>
           <section aria-label="About">
-            <Styled.Title abt>
-              <Icons.Dash size="20" />
-              <Styled.LineBg>about</Styled.LineBg>
-            </Styled.Title>
+            <Link to="/">
+              <Styled.Title abt>
+                <Icons.Dash size="20" />
+                <Styled.LineBg>about</Styled.LineBg>
+              </Styled.Title>
+            </Link>
           </section>
         </main>
       </React.Fragment>
@@ -82,10 +90,12 @@ export default function App() {
       <React.Fragment>
         <main>
           <section aria-label="Projects">
-            <Styled.Title>
-              <Icons.Dash size="20" />
-              <Styled.LineBg ref={eProject}>projects</Styled.LineBg>
-            </Styled.Title>
+            <Link to="/projects">
+              <Styled.Title>
+                <Icons.Dash size="20" />
+                <Styled.LineBg ref={eProject}>projects</Styled.LineBg>
+              </Styled.Title>
+            </Link>
           </section>
           <section aria-label="Contact">
             <Styled.Title>
@@ -95,10 +105,12 @@ export default function App() {
             <Contact />
           </section>
           <section aria-label="About">
-            <Styled.Title>
-              <Icons.Dash size="20" />
-              <Styled.LineBg>about</Styled.LineBg>
-            </Styled.Title>
+            <Link to="/">
+              <Styled.Title>
+                <Icons.Dash size="20" />
+                <Styled.LineBg>about</Styled.LineBg>
+              </Styled.Title>
+            </Link>
           </section>
         </main>
       </React.Fragment>
