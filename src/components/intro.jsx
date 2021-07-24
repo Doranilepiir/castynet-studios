@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import CastynetAnimated from "./castynetAnimation";
+import { Link } from "react-router-dom";
 
 export default class Intro extends Component {
   render() {
@@ -8,7 +9,9 @@ export default class Intro extends Component {
       <React.Fragment>
         <Wrapper aria-label="Introduction">
           <Title aria-label="Castynet Logo" title="Castynet Logo">
-            <CastynetAnimated />
+            <Link to="/">
+              <CastynetAnimated />
+            </Link>
           </Title>
           <Description>Empowering Software</Description>
           <Text>
