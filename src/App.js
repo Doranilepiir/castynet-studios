@@ -16,7 +16,13 @@ export default function App() {
     eContact = useRef(null),
     eAbout = useRef(null);
 
-  const HomePage = () => {
+  const HomePage = (props) => {
+    useEffect(() => {
+      if (props.location.state !== undefined && props.location.state.by === "About") {
+        eAbout.current.scrollIntoView(true);
+      }
+    }, [props.location.state]);
+
     const scIntoView = (e) => {
       eAbout.current.scrollIntoView(true);
     };
@@ -59,10 +65,6 @@ export default function App() {
       eProject.current.scrollIntoView(true);
     }, []);
 
-    const scIntoView = (e) => {
-      eAbout.current.scrollIntoView(true);
-    };
-
     return (
       <React.Fragment>
         <main>
@@ -83,8 +85,12 @@ export default function App() {
             </Link>
           </section>
           <section aria-label="About">
-            <Link to="/">
-              <Styled.Title onClick={() => scIntoView(eAbout)}>
+            <Link
+              to={{
+                pathname: "/",
+                state: { by: "About" },
+              }}>
+              <Styled.Title>
                 <Icons.Dash size="20" />
                 <Styled.LineBg ref={eAbout}>about</Styled.LineBg>
                 <Icons.Expand size="30" color="#ff1493" />
@@ -100,10 +106,6 @@ export default function App() {
     useEffect(() => {
       eContact.current.scrollIntoView(true);
     }, []);
-
-    const scIntoView = (e) => {
-      eAbout.current.scrollIntoView(true);
-    };
 
     return (
       <React.Fragment>
@@ -125,8 +127,12 @@ export default function App() {
             <Contact />
           </section>
           <section aria-label="About">
-            <Link to="/">
-              <Styled.Title onClick={() => scIntoView(eAbout)}>
+            <Link
+              to={{
+                pathname: "/",
+                state: { by: "About" },
+              }}>
+              <Styled.Title>
                 <Icons.Dash size="20" />
                 <Styled.LineBg ref={eAbout}>about</Styled.LineBg>
                 <Icons.Expand size="30" color="#ff1493" />
