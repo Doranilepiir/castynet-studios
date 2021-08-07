@@ -29,7 +29,7 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-content: center;
   grid-auto-flow: column;
-  padding: 2.5em;
+  padding: 2.5em 0.5em;
   background-color: rgb(0 0 0 / 0.45);
 `;
 

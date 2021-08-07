@@ -53,3 +53,19 @@
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
+
+.rec.rec-arrow {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  align-self: center;
+  min-width: 0;
+  font-size: 1em;
+  border-radius: 2px;
+  background-color: #eee;
+  color: #ff1493;
+}
+
+.rec.rec-arrow:disabled {
+  visibility: hidden;
+}
