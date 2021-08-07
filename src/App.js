@@ -71,7 +71,7 @@ export default function App() {
           <section aria-label="Projects">
             <Styled.Title>
               <Icons.Dash size="20" />
-              <Styled.LineBg ref={eProject}>projects</Styled.LineBg>
+              <Styled.LineBg ref={eProject}>projects &amp; partners</Styled.LineBg>
             </Styled.Title>
             <Projects />
           </section>
