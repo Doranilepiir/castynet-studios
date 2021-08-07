@@ -69,11 +69,13 @@ export default function App() {
       <React.Fragment>
         <main>
           <section aria-label="Projects">
-            <Styled.Title>
-              <Icons.Dash size="20" />
-              <Styled.LineBg ref={eProject}>projects &amp; partners</Styled.LineBg>
-            </Styled.Title>
-            <Projects />
+            <Link to="/">
+              <Styled.Title>
+                <Icons.Dash size="20" />
+                <Styled.LineBg ref={eProject}>projects &amp; partners</Styled.LineBg>
+              </Styled.Title>
+              <Projects />
+            </Link>
           </section>
           <section aria-label="Contact">
             <Link to="/contact">
@@ -120,11 +122,13 @@ export default function App() {
             </Link>
           </section>
           <section aria-label="Contact">
-            <Styled.Title>
-              <Icons.Dash size="20" />
-              <Styled.LineBg ref={eContact}>get in touch</Styled.LineBg>
-            </Styled.Title>
-            <Contact />
+            <Link to="/">
+              <Styled.Title>
+                <Icons.Dash size="20" />
+                <Styled.LineBg ref={eContact}>get in touch</Styled.LineBg>
+              </Styled.Title>
+              <Contact />
+            </Link>
           </section>
           <section aria-label="About">
             <Link
