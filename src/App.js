@@ -127,8 +127,8 @@ export default function App() {
                 <Icons.Dash size="20" />
                 <Styled.LineBg ref={eContact}>get in touch</Styled.LineBg>
               </Styled.Title>
-              <Contact />
             </Link>
+            <Contact />
           </section>
           <section aria-label="About">
             <Link
