@@ -69,4 +69,5 @@ export const Type = styled.p`
   margin: 0.5em 0 0.3em 0;
   font-family: "Teko", sans-serif;
   font-size: 1.4em;
+  text-transform: capitalize;
 `;
