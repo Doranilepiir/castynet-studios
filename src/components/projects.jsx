@@ -27,7 +27,8 @@ export default function Projects() {
                 {projects.type}
               </Styled.Type>
               <Styled.Button as="a" href={projects.link}>
-                View Project<span className="no-underline"></span>
+                View {projects.pp}
+                <span className="no-underline"></span>
                 <Icons.Link size="15" />
               </Styled.Button>
             </Styled.ProjectWrapper>
