@@ -15,31 +15,59 @@ export const ProjectsData = {
   items: [
     {
       id: 1,
+      name: "shop.genztech.xyz",
+      type: "online electronics store",
+      link: "https://shop.genztech.xyz/",
+      image: "../static/shop.genztech_logo.png",
+      pp: "project",
+    },
+    {
+      id: 2,
       name: "Digikids",
       type: "E-Learning Portal",
       link: "https://elearning.digikids.co.ke/",
       image: "../static/digikids_logo.png",
+      pp: "project",
     },
     {
-      id: 2,
+      id: 3,
+      name: "Nur Safaris",
+      type: "Travel Agency",
+      link: "/",
+      image: "../static/nur_safaris_logo.png",
+      pp: "partner",
+    },
+    {
+      id: 4,
+      name: "Pertom Digital",
+      type: "Software Dev Partner",
+      link: "https://pertomdigital.co.ke/",
+      image: "../static/pertom_digital_logo.png",
+      pp: "partner",
+    },
+    {
+      id: 5,
       name: "GadgetBuffs",
       type: "Brand Website",
       link: "https://gadgetbuffs.com/",
       image: "../static/gadgetbuffs_logo.png",
+      pp: "project",
     },
     {
-      id: 3,
+      id: 6,
       name: "Genztech",
       type: "In-house Brand",
       link: "https://genztech.xyz/",
       image: "../static/genztech_logo.png",
+      pp: "project",
     },
     {
-      id: 4,
-      name: "shop.genztech.xyz",
-      type: "In-house Brand",
-      link: "/",
+      id: 7,
+      name: "blog.genztech.xyz",
+      type: "Genztech Blog",
+      link: "https://blog.genztech.xyz/",
       image: "../static/shop.genztech_logo.png",
+      pp: "project",
     },
   ],
 };
@@ -61,14 +89,9 @@ export const Icons = {
 
 export const Links = {
   Github: "https://go.genztech.xyz/Github",
-
   Behance: "https://go.genztech.xyz/Behance",
-
   Twitter: "https://go.genztech.xyz/twitter",
-
   Pinterest: "https://go.genztech.xyz/pintrest",
-
   Instagram: "https://go.genztech.xyz/instagram",
-
   GoogleListing: "https://go.genztech.xyz/google_listing",
 };
