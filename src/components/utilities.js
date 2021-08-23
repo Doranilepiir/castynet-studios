@@ -37,14 +37,14 @@ export const ProjectsData = {
       image: "../static/nur_safaris_logo.png",
       pp: "partner",
     },
-    {
-      id: 4,
-      name: "Pertom Digital",
-      type: "Software Dev Partner",
-      link: "https://pertomdigital.co.ke/",
-      image: "../static/pertom_digital_logo.png",
-      pp: "partner",
-    },
+    // {
+    //   id: 4,
+    //   name: "Pertom Digital",
+    //   type: "Software Dev Partner",
+    //   link: "https://pertomdigital.co.ke/",
+    //   image: "../static/pertom_digital_logo.png",
+    //   pp: "partner",
+    // },
     {
       id: 5,
       name: "GadgetBuffs",
