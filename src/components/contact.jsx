@@ -1,9 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import { Helmet } from "react-helmet";
 
 export default function Contact() {
   return (
     <React.Fragment>
+      <Helmet>
+        <title>Contact Us</title>
+        <meta name="description" content="Get in-touch with castynet studios via +254743665574" />
+      </Helmet>
       <ContactWrap>
         We are booked out for the <span className="marked">next few weeks</span> but you can reach us via{" "}
         <a href="mailto:talk-to@castynet.africa" title="Email Castynet">

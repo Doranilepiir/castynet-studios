@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Icons, Links } from "./utilities";
+import { Helmet } from "react-helmet";
 
 export default function About() {
   const external = "noopener noreferrer external";
@@ -8,6 +9,13 @@ export default function About() {
 
   return (
     <React.Fragment>
+      <Helmet>
+        <title>Contact Us</title>
+        <meta
+          name="description"
+          content="We create empowering software, ranging from; websites, backend systems & APIs, an e-commerce store for your local business to enterprise-grade web apps."
+        />
+      </Helmet>
       <Wrapper>
         <AboutDescription>
           Castynet is a small team of <span className="marked">Software Developers</span> based in{" "}

@@ -3,6 +3,7 @@ import { ProjectsData } from "./utilities";
 import * as Styled from "./styles/projects.styles.jsx";
 import { Icons } from "./utilities";
 import Carousel from "react-elastic-carousel";
+import { Helmet } from "react-helmet";
 
 export default function Projects() {
   const projects = ProjectsData.items;
@@ -17,6 +18,13 @@ export default function Projects() {
 
   return (
     <React.Fragment>
+      <Helmet>
+        <title>Projects and Partners</title>
+        <meta
+          name="description"
+          content="Browse our past client projects, our very own in-house projects and persons we have partnered with."
+        />
+      </Helmet>
       <Styled.Wrapper>
         <Carousel itemsToShow={4} breakPoints={breakP}>
           {projects.map((projects) => (
