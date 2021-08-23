@@ -1,3 +1,7 @@
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://castynet.africa/$1 [R,L]
+
 Options -MultiViews
     RewriteEngine On
     RewriteCond %{REQUEST_FILENAME} !-f
