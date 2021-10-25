@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { Icons } from "../utilities";
 
 export const Image = styled.img`
+  border: 1px solid #fff;
+  border-radius: 5px;
   width: 100%;
 `;
 
@@ -12,11 +14,11 @@ export const Badge = styled(Icons.Check)`
 
 export const ProjectWrapper = styled.div`
   background-color: #fff;
-  width: 190px;
+  width: 200px;
   padding: 10px;
-  border-radius: 2px;
-  margin: 10px;
+  border-radius: 5px;
   transition: all 0.4s ease;
+  margin: 0 5px;
 
   &:hover {
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.38), 0 2px 10px 0 rgba(0, 0, 0, 0.38);
@@ -31,6 +33,15 @@ export const Wrapper = styled.div`
   grid-auto-flow: column;
   padding: 2.5em 0.5em;
   background-color: rgb(0 0 0 / 0.45);
+
+  .rec-carousel-wrapper {
+    max-width: 1240px;
+    margin: 0 auto;
+
+    .rec-pagination {
+      display: none;
+    }
+  }
 `;
 
 export const Button = styled.button`
