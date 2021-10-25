@@ -6,11 +6,15 @@ export default function Contact() {
   return (
     <React.Fragment>
       <Helmet>
-        <title>Contact Us</title>
-        <meta name="description" content="Get in-touch with castynet studios via +254743665574" />
+        <title>Contact - Castynet Africa</title>
+        <meta
+          name="description"
+          content="Get in-touch with castynet studios via +254743665574"
+        />
       </Helmet>
       <ContactWrap>
-        We are booked out for the <span className="marked">next few weeks</span> but you can reach us via{" "}
+        We are booked out for the <span className="marked">next few weeks</span>{" "}
+        but you can reach us via{" "}
         <a href="mailto:talk-to@castynet.africa" title="Email Castynet">
           <span
             className="marked"
@@ -18,7 +22,8 @@ export default function Contact() {
               background: "rgb(255 20 147 / 20%)",
               border: "1px solid rgb(255 20 147 / 30%)",
               color: "rgb(13 42 255)",
-            }}>
+            }}
+          >
             talk-to@castynet.africa
           </span>
         </a>{" "}
