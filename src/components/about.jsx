@@ -10,12 +10,15 @@ export default function About() {
     <React.Fragment>
       <Wrapper>
         <AboutDescription>
-          Castynet is a small team of <span className="marked">Software Developers</span> based in{" "}
-          <span className="marked">Nairobi KE,</span> We are high spirited geeks passionate about tech.
+          Castynet is a small team of{" "}
+          <span className="marked">Software Developers</span> based in{" "}
+          <span className="marked">Nairobi KE,</span> We are high spirited geeks
+          passionate about tech.
           <br />
-          Our mission is to create <span className="marked">Empowering Software</span> across the{" "}
-          <span className="marked">Web.</span> We are powered by coffee, unreal imagination and attention
-          to detail. <br />
+          Our mission is to create{" "}
+          <span className="marked">Empowering Software</span> across the{" "}
+          <span className="marked">Web.</span> We are powered by coffee, unreal
+          imagination and attention to detail. <br />
           If you have a project you think would be a fit for us do{" "}
           <a href="mailto:talk-to@castynet.africa" title="Email Castynet">
             <span
@@ -24,7 +27,8 @@ export default function About() {
                 background: "rgb(255 20 147 / 20%)",
                 border: "1px solid rgb(255 20 147 / 30%)",
                 color: "rgb(13 42 255)",
-              }}>
+              }}
+            >
               <u>reach out.</u>
             </span>
           </a>
@@ -35,7 +39,8 @@ export default function About() {
             href={Links.GoogleListing}
             target={blank}
             rel={external}
-            title="See Castynet's Rating on Google">
+            title="See Castynet's Rating on Google"
+          >
             <dd>
               5/5 Star on Google <Icons.Link size="17" />
             </dd>
@@ -43,17 +48,32 @@ export default function About() {
         </Rating>
         <Stats>
           <ListTitle>the numbers</ListTitle>
-          <a href={Links.Github} target={blank} rel={external} title="Visit Castynet's Github">
+          <a
+            href={Links.Github}
+            target={blank}
+            rel={external}
+            title="Visit Castynet's Github"
+          >
             <dd>
               931,019 lines of code <Icons.Github size="20" />
             </dd>
           </a>
-          <a href={Links.Instagram} target={blank} rel={external} title="Visit Castynet's Instagram">
+          <a
+            href={Links.Instagram}
+            target={blank}
+            rel={external}
+            title="Visit Castynet's Instagram"
+          >
             <dd>
               1.6k Peers <Icons.Instagram size="20" />
             </dd>
           </a>
-          <a href={Links.Twitter} target={blank} rel={external} title="Visit Castynet's Twitter">
+          <a
+            href={Links.Twitter}
+            target={blank}
+            rel={external}
+            title="Visit Castynet's Twitter"
+          >
             <dd>
               285 Tweets <Icons.Twitter size="20" />
             </dd>
