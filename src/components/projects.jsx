@@ -1,6 +1,6 @@
 import React from "react";
 import { ProjectsData } from "./utilities";
-import * as Styled from "./styles/projects.styles.jsx";
+import * as Styled from "./styles/projects.styles.js";
 import { Icons } from "./utilities";
 import Carousel from "react-elastic-carousel";
 import { Helmet } from "react-helmet";
@@ -9,9 +9,9 @@ export default function Projects() {
   const projects = ProjectsData.items;
   const breakP = [
     { width: 1, itemsToShow: 1 },
-    { width: 550, itemsToShow: 2, itemsToScroll: 2, pagination: false },
-    { width: 850, itemsToShow: 3 },
-    { width: 1150, itemsToShow: 4, itemsToScroll: 2 },
+    { width: 550, itemsToShow: 3, itemsToScroll: 2, pagination: false },
+    { width: 850, itemsToShow: 4 },
+    { width: 1150, itemsToShow: 5, itemsToScroll: 2 },
     { width: 1450, itemsToShow: 5 },
     { width: 1750, itemsToShow: 6 },
   ];
@@ -19,7 +19,7 @@ export default function Projects() {
   return (
     <React.Fragment>
       <Helmet>
-        <title>Projects and Partners</title>
+        <title>Projects and Partners - Castynet Studios</title>
         <meta
           name="description"
           content="Browse our past client projects, our very own in-house projects and persons we have partnered with."
