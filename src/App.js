@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import * as Styled from "./app.styles.jsx";
+import * as Styled from "./app.styles.js";
 import { Icons } from "./components/utilities";
 
 import Intro from "./components/intro";
@@ -18,7 +18,10 @@ export default function App() {
 
   const HomePage = (props) => {
     useEffect(() => {
-      if (props.location.state !== undefined && props.location.state.by === "About") {
+      if (
+        props.location.state !== undefined &&
+        props.location.state.by === "About"
+      ) {
         eAbout.current.scrollIntoView(true);
       }
     }, [props.location.state]);
@@ -72,7 +75,9 @@ export default function App() {
             <Link to="/">
               <Styled.Title>
                 <Icons.Dash size="20" />
-                <Styled.LineBg ref={eProject}>projects &amp; partners</Styled.LineBg>
+                <Styled.LineBg ref={eProject}>
+                  projects &amp; partners
+                </Styled.LineBg>
               </Styled.Title>
             </Link>
             <Projects />
@@ -91,7 +96,8 @@ export default function App() {
               to={{
                 pathname: "/",
                 state: { by: "About" },
-              }}>
+              }}
+            >
               <Styled.Title>
                 <Icons.Dash size="20" />
                 <Styled.LineBg ref={eAbout}>about</Styled.LineBg>
@@ -135,7 +141,8 @@ export default function App() {
               to={{
                 pathname: "/",
                 state: { by: "About" },
-              }}>
+              }}
+            >
               <Styled.Title>
                 <Icons.Dash size="20" />
                 <Styled.LineBg ref={eAbout}>about</Styled.LineBg>
